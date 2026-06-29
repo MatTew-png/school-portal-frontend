@@ -1,1 +1,11 @@
 // app global css
+body {
+  font-family: 'Prompt', sans-serif;
+  background-color: var(--q-background, #F9F9F9);
+  color: var(--q-dark, #333333);
+}
+
+// Custom typography sizes for better readability
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}

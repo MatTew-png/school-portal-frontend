@@ -12,14 +12,17 @@
 // to match your app's branding.
 // Tip: Use the "Theme Builder" on Quasar's documentation website.
 
-$primary: #1976d2;
-$secondary: #26a69a;
-$accent: #9c27b0;
+$primary: #1B5E20; // Deep Forest Green
+$secondary: #4CAF50;
+$accent: #FFC107; // Golden Yellow
 
-$dark: #1d1d1d;
+$dark: #333333; // Dark Gray for text
 $dark-page: #121212;
 
 $positive: #21ba45;
 $negative: #c10015;
 $info: #31ccec;
 $warning: #f2c037;
+
+// Custom variables
+$background: #F9F9F9; // Off-White / Cream
