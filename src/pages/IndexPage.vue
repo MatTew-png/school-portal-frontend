@@ -34,19 +34,56 @@
       </q-carousel-slide>
     </q-carousel>
 
-    <div class="q-pa-xl">
+    <!-- [NEW] ADMISSIONS BANNER -->
+    <div class="bg-secondary text-dark text-center q-pa-md q-mb-xl shadow-2">
+      <div class="row items-center justify-center q-gutter-md">
+        <q-icon name="campaign" size="36px" color="primary" /> 
+        <div class="text-h5 text-weight-bold">เปิดรับสมัครนักเรียนใหม่ ประจำปีการศึกษา 2568</div>
+        <q-btn color="primary" text-color="white" label="ดูรายละเอียดการรับสมัคร" unelevated rounded class="text-weight-bold q-px-md" />
+      </div>
+    </div>
+
+    <div class="q-px-xl q-pb-xl">
+      <!-- [NEW] PARENT QUICK LINKS -->
+      <section class="q-mb-xl">
+        <div class="text-h4 text-primary text-weight-bold q-mb-lg text-center">บริการสำหรับผู้ปกครอง</div>
+        <div class="row q-col-gutter-lg justify-center">
+          <div class="col-6 col-md-3 text-center">
+            <q-btn type="a" href="https://drive.google.com/file/d/1_IvpsZ9n0OJX482ZkrrGwDg1srZwEjvh/view?pli=1" target="_blank" round color="blue-1" text-color="blue-8" size="32px" icon="menu_book" class="q-mb-sm shadow-3 transition-transform hover-scale" />
+            <div class="text-h6 text-weight-bold">คู่มือนักเรียน</div>
+            <div class="text-caption text-grey">ดาวน์โหลดระเบียบการ</div>
+          </div>
+          <div class="col-6 col-md-3 text-center">
+            <q-btn type="a" href="https://www.facebook.com/Banthasungschool" target="_blank" round color="indigo-1" text-color="indigo-8" size="32px" icon="facebook" class="q-mb-sm shadow-3 transition-transform hover-scale" />
+            <div class="text-h6 text-weight-bold">ติดตามข่าวสาร</div>
+            <div class="text-caption text-grey">เพจเฟสบุ๊คโรงเรียน</div>
+          </div>
+          <div class="col-6 col-md-3 text-center">
+            <q-btn type="a" href="https://m.me/Banthasungschool" target="_blank" round color="light-blue-1" text-color="light-blue-8" size="32px" icon="chat" class="q-mb-sm shadow-3 transition-transform hover-scale" />
+            <div class="text-h6 text-weight-bold">ติดต่อสอบถาม</div>
+            <div class="text-caption text-grey">ทักแชท Messenger</div>
+          </div>
+          <div class="col-6 col-md-3 text-center">
+            <q-btn type="a" href="https://maps.app.goo.gl/tBq3RzQjVfUfHpHV6" target="_blank" round color="red-1" text-color="red-8" size="32px" icon="place" class="q-mb-sm shadow-3 transition-transform hover-scale" />
+            <div class="text-h6 text-weight-bold">แผนที่โรงเรียน</div>
+            <div class="text-caption text-grey">การเดินทางมาติดต่อ</div>
+          </div>
+        </div>
+      </section>
+
       <!-- NEWS BOARD -->
       <section class="q-mb-xl">
         <div class="text-h4 text-primary text-weight-bold q-mb-lg text-center">ข่าวสารและประกาศ</div>
         <div class="row q-col-gutter-lg">
-          <div class="col-12 col-md-4" v-for="i in 3" :key="'news'+i">
-            <q-card class="my-card h-100">
-              <q-img src="https://cdn.quasar.dev/img/mountains.jpg" height="200px" />
+          
+          <div class="col-12 col-md-4">
+            <q-card class="my-card h-100 shadow-2 hover-card">
+              <q-img src="/hero1.png" height="200px" />
               <q-card-section>
-                <div class="text-overline text-accent">ประชาสัมพันธ์</div>
-                <div class="text-h6 q-mt-sm q-mb-xs">กิจกรรมวันสำคัญทางศาสนา ประจำปี 2567</div>
+                <div class="text-overline text-accent">ประกาศรับสมัคร</div>
+                <div class="text-h6 q-mt-sm q-mb-xs">ประกาศรายชื่อผู้มีสิทธิ์เข้าศึกษาต่อ ชั้น ป.1</div>
                 <div class="text-caption text-grey">
-                  ขอเชิญชวนผู้ปกครองและนักเรียนเข้าร่วมกิจกรรมทำบุญตักบาตร ณ วัดท่าซุง...
+                  โรงเรียนบ้านท่าซุง ขอประกาศรายชื่อนักเรียนที่ผ่านการคัดเลือกเข้าศึกษาต่อในระดับชั้นประถมศึกษาปีที่ 1 ประจำปีการศึกษา 2568 (รอบที่ 1)...
                 </div>
               </q-card-section>
               <q-card-actions align="right">
@@ -54,74 +91,206 @@
               </q-card-actions>
             </q-card>
           </div>
+
+          <div class="col-12 col-md-4">
+            <q-card class="my-card h-100 shadow-2 hover-card">
+              <q-img src="/hero2.png" height="200px" />
+              <q-card-section>
+                <div class="text-overline text-primary">ประชาสัมพันธ์</div>
+                <div class="text-h6 q-mt-sm q-mb-xs">ประชุมผู้ปกครอง ภาคเรียนที่ 1/2568</div>
+                <div class="text-caption text-grey">
+                  ขอเชิญผู้ปกครองนักเรียนทุกระดับชั้น เข้าร่วมรับฟังนโยบายการจัดการศึกษาและพบปะครูประจำชั้น เพื่อเตรียมความพร้อมก่อนเปิดเทอม...
+                </div>
+              </q-card-section>
+              <q-card-actions align="right">
+                <q-btn flat color="primary" label="อ่านเพิ่มเติม" />
+              </q-card-actions>
+            </q-card>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <q-card class="my-card h-100 shadow-2 hover-card">
+              <q-img src="/hero3.png" height="200px" />
+              <q-card-section>
+                <div class="text-overline text-positive">ผลงานวิชาการ</div>
+                <div class="text-h6 q-mt-sm q-mb-xs">ผลการประเมินคุณภาพการศึกษา (NT) ชั้น ป.3</div>
+                <div class="text-caption text-grey">
+                  ขอแสดงความยินดีกับนักเรียนระดับชั้นประถมศึกษาปีที่ 3 ที่ทำคะแนนการทดสอบ NT ได้สูงกว่าระดับประเทศในทุกด้าน ประจำปีการศึกษา 2567...
+                </div>
+              </q-card-section>
+              <q-card-actions align="right">
+                <q-btn flat color="primary" label="อ่านเพิ่มเติม" />
+              </q-card-actions>
+            </q-card>
+          </div>
+
         </div>
         <div class="text-center q-mt-lg">
-          <q-btn outline color="primary" label="ดูข่าวสารทั้งหมด" />
+          <q-btn outline color="primary" label="ดูข่าวสารทั้งหมด" rounded class="q-px-lg" />
         </div>
       </section>
 
       <!-- CALENDAR & ACTIVITY GALLERY ROW -->
       <section class="row q-col-gutter-xl q-mb-xl">
-        
         <!-- CALENDAR -->
-        <div class="col-12 col-md-5">
-          <div class="text-h5 text-primary text-weight-bold q-mb-md">ปฏิทินกิจกรรม</div>
-          <q-card flat bordered class="bg-white">
-            <q-list separator>
-              <q-item>
-                <q-item-section avatar>
-                  <q-avatar color="primary" text-color="white" class="text-weight-bold">15</q-avatar>
-                  <div class="text-caption text-center text-primary q-mt-xs">พ.ค.</div>
-                </q-item-section>
-                <q-item-section>
-                  <q-item-label class="text-weight-bold">วันเปิดภาคเรียนที่ 1/2567</q-item-label>
-                  <q-item-label caption>นักเรียนทุกระดับชั้นมาโรงเรียนตามปกติ</q-item-label>
-                </q-item-section>
-              </q-item>
+        <div class="col-12 col-md-4">
+          <div class="text-h5 text-primary text-weight-bold q-mb-md"><q-icon name="event" class="q-mr-sm"/>ปฏิทินกิจกรรม</div>
+          <q-card flat bordered class="bg-white shadow-2 overflow-hidden" style="border-radius: 12px;">
+            <div class="row items-center justify-between q-pa-sm bg-primary text-white">
+              <q-btn flat round dense icon="chevron_left" size="sm" />
+              <div class="text-weight-bold">พฤษภาคม 2568</div>
+              <q-btn flat round dense icon="chevron_right" size="sm" />
+            </div>
+            
+            <div class="row text-center text-weight-bold text-grey-8 bg-grey-2 q-py-xs" style="font-size: 11px;">
+              <div class="col text-red">อา</div>
+              <div class="col">จ</div>
+              <div class="col">อ</div>
+              <div class="col">พ</div>
+              <div class="col">พฤ</div>
+              <div class="col">ศ</div>
+              <div class="col">ส</div>
+            </div>
+            
+            <div class="row" style="border-top: 1px solid #eee;">
+              <div v-for="blank in startDayOfWeek" :key="'blank'+blank" style="width: 14.28%; border-right: 1px solid #eee; border-bottom: 1px solid #eee; min-height: 55px; background: #fafafa;"></div>
               
-              <q-item>
-                <q-item-section avatar>
-                  <q-avatar color="primary" text-color="white" class="text-weight-bold">03</q-avatar>
-                  <div class="text-caption text-center text-primary q-mt-xs">มิ.ย.</div>
-                </q-item-section>
-                <q-item-section>
-                  <q-item-label class="text-weight-bold">วันเฉลิมพระชนมพรรษาฯ</q-item-label>
-                  <q-item-label caption>หยุดทำการเรียนการสอน 1 วัน</q-item-label>
-                </q-item-section>
-              </q-item>
-              
-              <q-item>
-                <q-item-section avatar>
-                  <q-avatar color="primary" text-color="white" class="text-weight-bold">12</q-avatar>
-                  <div class="text-caption text-center text-primary q-mt-xs">ส.ค.</div>
-                </q-item-section>
-                <q-item-section>
-                  <q-item-label class="text-weight-bold">กิจกรรมวันแม่แห่งชาติ</q-item-label>
-                  <q-item-label caption>ประกวดวาดภาพระบายสีและเรียงความ</q-item-label>
-                </q-item-section>
-              </q-item>
-            </q-list>
-            <div class="q-pa-md text-center">
-              <q-btn flat color="primary" label="ดูปฏิทินทั้งหมด" />
+              <div v-for="day in daysInMonth" :key="'day'+day" class="q-pa-xs" style="width: 14.28%; border-right: 1px solid #eee; border-bottom: 1px solid #eee; min-height: 55px;">
+                <div class="text-right text-caption" :class="(day + startDayOfWeek) % 7 === 1 ? 'text-red text-weight-bold' : 'text-grey-9'">{{ day }}</div>
+                <template v-if="events[day]">
+                  <div v-for="(ev, idx) in events[day]" :key="'ev'+day+idx" :class="ev.color" class="text-white q-px-xs q-mt-xs" style="border-radius: 3px; font-size: 9px; line-height: 1.4; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;" :title="ev.title">
+                    {{ ev.title }}
+                  </div>
+                </template>
+              </div>
+            </div>
+            <div class="q-pa-sm text-center bg-grey-1">
+              <q-btn flat color="primary" label="ดูปฏิทินทั้งหมด" size="sm" />
             </div>
           </q-card>
         </div>
 
-        <!-- ACTIVITY GALLERY -->
-        <div class="col-12 col-md-7">
-          <div class="text-h5 text-primary text-weight-bold q-mb-md">ภาพกิจกรรมล่าสุด</div>
-          <div class="row q-col-gutter-sm">
-            <div class="col-6 col-sm-4" v-for="i in 6" :key="'img'+i">
-              <q-img :src="`https://picsum.photos/400/300?random=${i}`" ratio="1" class="rounded-borders cursor-pointer" >
-                <div class="absolute-bottom text-center text-caption" style="padding: 4px;">
-                  กิจกรรมที่ {{i}}
-                </div>
-              </q-img>
-            </div>
+        <!-- ACTIVITY GALLERY (ENHANCED) -->
+        <div class="col-12 col-md-8">
+          <div class="row items-center justify-between q-mb-md">
+            <div class="text-h5 text-primary text-weight-bold"><q-icon name="photo_library" class="q-mr-sm"/>ภาพกิจกรรมล่าสุด</div>
+            <q-tabs v-model="tab" dense class="text-grey" active-color="primary" indicator-color="primary" align="right" narrow-indicator>
+              <q-tab name="all" label="ทั้งหมด" />
+              <q-tab name="kg" label="อนุบาล" />
+              <q-tab name="pr" label="ประถม" />
+            </q-tabs>
           </div>
-        </div>
+          <q-tab-panels v-model="tab" animated class="bg-transparent">
+            
+            <q-tab-panel name="all" class="q-pa-none">
+              <div class="row q-col-gutter-md">
+                <div class="col-6 col-sm-4" v-for="(act, index) in activities" :key="'act'+index">
+                  <q-card class="hover-card">
+                    <q-img :src="act.img" ratio="1.33" class="rounded-borders">
+                      <div class="absolute-bottom text-center text-caption" style="padding: 8px; background: rgba(0,0,0,0.6);">
+                        {{ act.title }}
+                      </div>
+                    </q-img>
+                  </q-card>
+                </div>
+              </div>
+            </q-tab-panel>
 
+            <q-tab-panel name="kg" class="q-pa-none">
+              <div class="text-center q-pa-xl text-grey">แสดงรูปภาพกิจกรรมสายชั้นอนุบาล</div>
+            </q-tab-panel>
+            <q-tab-panel name="pr" class="q-pa-none">
+              <div class="text-center q-pa-xl text-grey">แสดงรูปภาพกิจกรรมสายชั้นประถม</div>
+            </q-tab-panel>
+          </q-tab-panels>
+        </div>
       </section>
+
+      <!-- [NEW] TEACHERS DIRECTORY -->
+      <section class="q-mb-xl q-mt-xl">
+        <div class="text-h4 text-primary text-weight-bold q-mb-lg text-center">ทำเนียบคุณครูประจำชั้น</div>
+        <div class="row q-col-gutter-lg justify-center">
+          
+          <div class="col-12 col-md-4">
+            <q-card flat bordered class="text-center q-pa-lg" style="border-radius: 16px; border-top: 4px solid var(--q-primary);">
+              <div class="text-h6 text-weight-bold q-mb-md">สายชั้นอนุบาล</div>
+              <div class="row justify-center q-gutter-md">
+                <div class="col-5">
+                  <q-avatar size="80px" class="shadow-2 q-mb-sm">
+                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=กมลวรรณ&backgroundColor=4caf50">
+                  </q-avatar>
+                  <div class="text-weight-bold">นางกมลวรรณ ใจดี</div>
+                  <div class="text-caption text-grey">ครูประจำชั้น อนุบาล 1</div>
+                </div>
+                <div class="col-5">
+                  <q-avatar size="80px" class="shadow-2 q-mb-sm">
+                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=สุนิสา&backgroundColor=4caf50">
+                  </q-avatar>
+                  <div class="text-weight-bold">นางสาวสุนิสา รักษ์เด็ก</div>
+                  <div class="text-caption text-grey">ครูประจำชั้น อนุบาล 2</div>
+                </div>
+              </div>
+            </q-card>
+          </div>
+          
+          <div class="col-12 col-md-4">
+            <q-card flat bordered class="text-center q-pa-lg" style="border-radius: 16px; border-top: 4px solid var(--q-secondary);">
+              <div class="text-h6 text-weight-bold q-mb-md">สายชั้น ป.1 - ป.3</div>
+              <div class="row justify-center q-gutter-md">
+                <div class="col-5">
+                  <q-avatar size="80px" class="shadow-2 q-mb-sm">
+                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=สมพร&backgroundColor=ffb300">
+                  </q-avatar>
+                  <div class="text-weight-bold">นางสมพร ประเสริฐ</div>
+                  <div class="text-caption text-grey">ครูประจำชั้น ป.1</div>
+                </div>
+                <div class="col-5">
+                  <q-avatar size="80px" class="shadow-2 q-mb-sm">
+                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=วิชัย&backgroundColor=ffb300">
+                  </q-avatar>
+                  <div class="text-weight-bold">นายวิชัย แสงทอง</div>
+                  <div class="text-caption text-grey">ครูประจำชั้น ป.2</div>
+                </div>
+              </div>
+            </q-card>
+          </div>
+          
+          <div class="col-12 col-md-4">
+            <q-card flat bordered class="text-center q-pa-lg" style="border-radius: 16px; border-top: 4px solid var(--q-accent);">
+              <div class="text-h6 text-weight-bold q-mb-md">สายชั้น ป.4 - ป.6</div>
+              <div class="row justify-center q-gutter-md">
+                <div class="col-5">
+                  <q-avatar size="80px" class="shadow-2 q-mb-sm">
+                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=สมชาย&backgroundColor=1976d2">
+                  </q-avatar>
+                  <div class="text-weight-bold">นายสมชาย ชาญชัย</div>
+                  <div class="text-caption text-grey">ครูประจำชั้น ป.4</div>
+                </div>
+                <div class="col-5">
+                  <q-avatar size="80px" class="shadow-2 q-mb-sm">
+                    <img src="https://api.dicebear.com/7.x/initials/svg?seed=วิไลวรรณ&backgroundColor=1976d2">
+                  </q-avatar>
+                  <div class="text-weight-bold">น.ส.วิไลวรรณ พลเยี่ยม</div>
+                  <div class="text-caption text-grey">ครูประจำชั้น ป.6</div>
+                </div>
+              </div>
+            </q-card>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- [NEW] TEACHER PORTAL -->
+      <q-separator class="q-my-xl" />
+      <section class="q-mb-md">
+        <div class="text-subtitle1 text-grey-8 text-weight-bold q-mb-sm"><q-icon name="lock" class="q-mr-xs"/> สำหรับบุคลากรภายใน (Teacher Portal)</div>
+        <div class="row q-gutter-sm">
+          <q-btn flat outline color="grey-7" icon="dns" label="ระบบ BookMark" size="sm" />
+          <q-btn flat outline color="grey-7" icon="font_download" label="ดาวน์โหลด 13 ฟอนต์ราชการ" size="sm" />
+          <q-btn flat outline color="grey-7" icon="description" label="แบบฟอร์มเอกสารต่างๆ" size="sm" />
+        </div>
+      </section>
+
     </div>
   </q-page>
 </template>
@@ -130,6 +299,27 @@
 import { ref } from 'vue';
 
 const slide = ref('1');
+const tab = ref('all');
+
+// Calendar Data Mock
+const daysInMonth = Array.from({length: 31}, (_, i) => i + 1);
+const startDayOfWeek = 4; // May 1st is Thursday (index 4)
+const events = {
+  1: [{ title: 'วันแรงงาน', color: 'bg-green-7' }],
+  4: [{ title: 'วันฉัตรมงคล', color: 'bg-green-7' }],
+  13: [{ title: 'วันพืชมงคล', color: 'bg-green-7' }],
+  15: [{ title: 'เปิดเทอม 1/68', color: 'bg-blue-7' }]
+} as Record<number, {title: string, color: string}[]>;
+
+// Activities Data Mock (Realistic)
+const activities = [
+  { title: 'กิจกรรมกีฬาสีประจำปี 2567', img: '/hero1.png' },
+  { title: 'กิจกรรมวันแม่แห่งชาติ', img: '/hero2.png' },
+  { title: 'ทัศนศึกษาแหล่งเรียนรู้', img: '/hero3.png' },
+  { title: 'เข้าค่ายลูกเสือ-เนตรนารี', img: '/hero2.png' },
+  { title: 'กิจกรรมวันสุนทรภู่', img: '/hero1.png' },
+  { title: 'สัปดาห์วิทยาศาสตร์แห่งชาติ', img: '/hero3.png' },
+];
 </script>
 
 <style scoped>
@@ -142,5 +332,18 @@ const slide = ref('1');
 }
 .h-100 {
   height: 100%;
+}
+.hover-scale {
+  transition: transform 0.2s;
+}
+.hover-scale:hover {
+  transform: scale(1.1);
+}
+.hover-card {
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.hover-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
 }
 </style>
