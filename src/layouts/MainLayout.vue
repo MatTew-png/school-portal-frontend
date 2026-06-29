@@ -84,7 +84,6 @@
     <q-footer class="bg-primary text-white">
       <div class="q-pa-xl">
         <div class="row q-col-gutter-lg justify-between">
-          
           <!-- Column 1: Contact Info -->
           <div class="col-12 col-md-4">
             <div class="row items-center q-mb-md">
@@ -96,22 +95,34 @@
             <p>สังกัด สพป.ฉะเชิงเทรา เขต 2</p>
             <p><q-icon name="phone" class="q-mr-sm"/> 038-xxx-xxxx</p>
             <p><q-icon name="email" class="q-mr-sm"/> admin@baanthasung.ac.th</p>
-            <q-btn color="accent" text-color="dark" label="ติดต่อโรงเรียน" class="q-mt-sm text-weight-bold" unelevated icon="contact_support" />
-          </div>
-
-          <!-- Column 2: Admission -->
-          <div class="col-12 col-md-4">
-            <div class="text-h6 q-mb-md">ฝ่ายวิชาการและธุรการ</div>
-            <div class="row items-center q-mb-sm">
-              <q-icon name="school" size="32px" class="q-mr-md" />
-              <span>สอบถามข้อมูลการรับสมัครนักเรียนใหม่ ประจำปีการศึกษา 2567</span>
+            <div class="q-gutter-sm q-mt-sm">
+              <q-btn color="accent" text-color="dark" label="ติดต่อโรงเรียน" unelevated icon="contact_support" />
+              <q-btn color="accent" text-color="dark" label="ระบบรับสมัคร" unelevated icon="how_to_reg" />
             </div>
-            <q-btn color="accent" text-color="dark" label="ระบบรับสมัครนักเรียน" class="q-mt-sm text-weight-bold full-width-sm" unelevated icon="how_to_reg" />
           </div>
 
-          <!-- Column 3: Feedback & CTA -->
-          <div class="col-12 col-md-4 text-right">
-            <q-btn color="accent" text-color="dark" label="ส่งข้อเสนอแนะ" unelevated icon="feedback" class="text-weight-bold q-mb-lg" />
+          <!-- Column 2: Facebook Page -->
+          <div class="col-12 col-md-4">
+            <div class="text-h6 q-mb-md row items-center">
+              <q-icon name="facebook" size="28px" class="q-mr-sm" /> ติดตามข่าวสารจากเพจ
+            </div>
+            <div class="bg-white shadow-4 transition-transform hover-scale" style="border-radius: 12px; padding: 6px;">
+              <div style="border-radius: 8px; overflow: hidden; height: 400px;">
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FBanthasungschool&tabs=timeline&width=340&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="100%" height="400" style="border:none;overflow:hidden;" scrolling="yes" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3: Google Map -->
+          <div class="col-12 col-md-4">
+            <div class="text-h6 q-mb-md row items-center">
+              <q-icon name="place" size="28px" class="q-mr-sm" /> แผนที่การเดินทาง
+            </div>
+            <div class="bg-white shadow-4 transition-transform hover-scale" style="border-radius: 12px; padding: 6px;">
+              <div style="border-radius: 8px; overflow: hidden; height: 400px;">
+                <iframe src="https://maps.google.com/maps?q=13.5809976,101.517889&t=k&z=16&output=embed" width="100%" height="400" style="border:none;overflow:hidden;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -122,7 +133,7 @@
         <div class="row items-center justify-between">
           <div>&copy; 2026 โรงเรียนบ้านท่าซุง. All rights reserved.</div>
           <div class="row q-gutter-sm">
-            <q-btn flat round dense icon="facebook" />
+            <q-btn flat round dense icon="facebook" type="a" href="https://www.facebook.com/Banthasungschool?ref=embed_page" target="_blank" />
             <q-btn flat round dense icon="ondemand_video" /> <!-- YouTube -->
           </div>
         </div>
