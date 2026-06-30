@@ -156,14 +156,15 @@
           </div>
 
           <!-- MAIN CONTENT: LIST & SIDEBAR -->
-          <div class="row q-col-gutter-xl q-mt-xl q-pt-lg">
+          <q-separator class="q-my-xl" color="grey-3" />
+          <div class="row q-col-gutter-xl q-mt-xl">
             <!-- LEFT: NEWS LIST -->
             <div class="col-12 col-md-8">
-              <div class="text-h5 text-weight-bold q-mb-lg text-dark flex items-center" style="border-left: 5px solid var(--q-primary); padding-left: 12px;">
+              <div class="text-h4 text-weight-bold q-mb-lg text-dark flex items-center" style="border-left: 5px solid var(--q-primary); padding-left: 12px;">
                 ข่าวสารล่าสุดอื่นๆ
               </div>
               
-              <div class="q-gutter-y-lg">
+              <div class="column" style="gap: 24px;">
                 <div 
                   v-for="(item, index) in regularNewsList" 
                   :key="item.id"
