@@ -1,11 +1,15 @@
 <template>
   <q-page class="bg-grey-2 q-pa-md">
     <!-- PAGE HEADER -->
-    <div class="row items-center q-mb-md">
-      <div class="text-h5 text-weight-bold text-primary flex items-center">
-        <q-icon name="event" class="q-mr-sm" size="md" /> ปฏิทินกิจกรรม
+    <q-card flat class="q-mb-lg bg-dark text-white shadow-3" style="border-radius: 12px; overflow: hidden;">
+      <q-img src="/hero1.png" style="height: 160px; opacity: 0.6;" />
+      <div class="absolute-full flex flex-center column" style="background: rgba(0,0,0,0.3)">
+        <div class="text-h3 text-weight-bold flex items-center">
+          <q-icon name="event_note" class="q-mr-md" size="xl" /> ปฏิทินกิจกรรม
+        </div>
+        <div class="text-subtitle1 q-mt-sm">โรงเรียนบ้านท่าซุง ประจำปีการศึกษา 2568</div>
       </div>
-    </div>
+    </q-card>
 
     <!-- CALENDAR SPLIT VIEW -->
     <div class="row q-col-gutter-lg">
@@ -22,6 +26,33 @@
             text-color="dark"
             mask="YYYY/MM/DD"
           />
+        </q-card>
+
+        <!-- LEGEND -->
+        <q-card flat bordered class="bg-white q-mt-md" style="border-radius: 4px">
+          <div class="bg-grey-2 q-pa-sm text-weight-bold text-dark text-center" style="border-bottom: 1px solid #ddd">
+            คำอธิบายสัญลักษณ์สี
+          </div>
+          <q-list dense class="q-pa-sm">
+            <q-item>
+              <q-item-section avatar style="min-width: 30px">
+                <q-icon name="circle" color="green-8" size="sm" />
+              </q-item-section>
+              <q-item-section class="text-body2 text-grey-9">วันหยุดราชการ / นักขัตฤกษ์</q-item-section>
+            </q-item>
+            <q-item>
+              <q-item-section avatar style="min-width: 30px">
+                <q-icon name="circle" color="primary" size="sm" />
+              </q-item-section>
+              <q-item-section class="text-body2 text-grey-9">กิจกรรมวิชาการ / เปิดภาคเรียน</q-item-section>
+            </q-item>
+            <q-item>
+              <q-item-section avatar style="min-width: 30px">
+                <q-icon name="circle" color="orange-6" size="sm" />
+              </q-item-section>
+              <q-item-section class="text-body2 text-grey-9">กิจกรรมทั่วไป / ประชุม</q-item-section>
+            </q-item>
+          </q-list>
         </q-card>
       </div>
 
@@ -46,45 +77,35 @@
           </div>
 
           <q-scroll-area class="flex-grow-1" style="min-height: 400px">
-            <q-list separator class="q-pa-sm">
+            <div class="q-pa-md">
               <template v-if="filteredEvents.length > 0">
-                <q-item v-for="(ev, i) in filteredEvents" :key="i" class="q-py-md hover-bg">
-                  <q-item-section avatar>
-                    <div
-                      class="text-center rounded-borders q-pa-xs shadow-1"
-                      :class="ev.color"
-                      style="width: 50px; color: white"
-                    >
-                      <div class="text-caption bg-dark text-white" style="font-size: 11px">
-                        {{ ev.monthShort }}
-                      </div>
-                      <div class="text-weight-bold text-h6" style="line-height: 1.2">
-                        {{ ev.dayStr }}
-                      </div>
+                <q-timeline color="primary">
+                  <q-timeline-entry
+                    v-for="(ev, i) in filteredEvents"
+                    :key="i"
+                    :title="ev.title"
+                    :subtitle="`${ev.dayStr} ${ev.monthShort} | ${ev.time}`"
+                    :color="ev.color.replace('bg-', '')"
+                    icon="event"
+                  >
+                    <div class="text-body1 q-mt-sm" style="line-height: 1.6;">
+                      {{ ev.description }}
                     </div>
-                  </q-item-section>
-                  <q-item-section class="q-pl-sm">
-                    <q-item-label class="text-subtitle1 text-weight-bold text-dark">{{
-                      ev.title
-                    }}</q-item-label>
-                    <q-item-label caption class="text-primary q-mt-xs">
-                      <q-icon name="schedule" class="q-mr-xs" /> {{ ev.time }}
-                      <q-icon name="place" class="q-ml-sm q-mr-xs" /> {{ ev.location }}
-                    </q-item-label>
-                    <q-item-label class="q-mt-sm text-body2 text-grey-9" style="line-height: 1.5">{{
-                      ev.description
-                    }}</q-item-label>
-                  </q-item-section>
-                </q-item>
+                    <div class="q-mt-sm flex items-center text-primary text-weight-bold">
+                      <q-icon name="place" class="q-mr-xs" size="sm" /> 
+                      {{ ev.location }}
+                    </div>
+                  </q-timeline-entry>
+                </q-timeline>
               </template>
               <template v-else>
                 <div class="text-center q-pa-xl text-grey-6">
-                  <q-icon name="event_busy" size="64px" class="q-mb-md opacity-50" />
-                  <div class="text-h6">ไม่มีกิจกรรมในวันที่เลือก</div>
-                  <div class="text-caption">กรุณาเลือกวันอื่น หรือกดดูกิจกรรมทั้งหมด</div>
+                  <q-icon name="event_busy" size="80px" class="q-mb-md opacity-30" />
+                  <div class="text-h5 text-weight-bold q-mb-sm">ไม่มีกิจกรรมในวันที่เลือก</div>
+                  <div class="text-body1">กรุณาเลือกวันอื่นบนปฏิทิน หรือกดดูกิจกรรมทั้งหมด</div>
                 </div>
               </template>
-            </q-list>
+            </div>
           </q-scroll-area>
         </q-card>
       </div>
