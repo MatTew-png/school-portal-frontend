@@ -45,59 +45,6 @@
 
     <div class="q-px-xl q-pb-xl">
       
-      <!-- [NEW] DIRECTOR'S MESSAGE -->
-      <section class="q-mb-xl animate-fade-in-up">
-        <q-card flat bordered class="overflow-hidden bg-white" style="border-radius: 16px;">
-          <div class="row items-stretch">
-            <div class="col-12 col-md-4 bg-primary text-center q-pa-xl flex flex-center">
-              <div>
-                <q-avatar size="150px" class="shadow-4 q-mb-md" style="border: 4px solid white; background-color: white;">
-                  <img src="https://api.dicebear.com/7.x/initials/svg?seed=สมศักดิ์&backgroundColor=1976d2" />
-                </q-avatar>
-                <div class="text-h6 text-white text-weight-bold">นายสมศักดิ์ รักการศึกษา</div>
-                <div class="text-white" style="opacity: 0.9;">ผู้อำนวยการโรงเรียนบ้านท่าซุง</div>
-              </div>
-            </div>
-            <div class="col-12 col-md-8 q-pa-xl flex column justify-center relative-position">
-              <q-icon name="format_quote" color="grey-3" size="80px" class="absolute-top-right q-pa-md" style="z-index: 0;" />
-              <div style="z-index: 1;">
-                <div class="text-h4 text-primary text-weight-bold q-mb-md">สารจากผู้อำนวยการ</div>
-                <p class="text-body1 text-grey-8" style="line-height: 1.8;">
-                  "โรงเรียนบ้านท่าซุง มุ่งมั่นพัฒนาผู้เรียนให้มีความรู้คู่คุณธรรม ส่งเสริมทักษะวิชาการและทักษะชีวิตในศตวรรษที่ 21 
-                  ภายใต้สภาพแวดล้อมที่ปลอดภัยและเอื้อต่อการเรียนรู้ เราพร้อมที่จะร่วมมือกับผู้ปกครองและชุมชน 
-                  ในการสร้างอนาคตที่สดใสให้กับบุตรหลานของเราทุกคน เพราะเราเชื่อว่าเด็กทุกคนคืออนาคตของชาติ"
-                </p>
-                <div class="q-mt-lg">
-                  <q-btn outline color="primary" label="อ่านวิสัยทัศน์เพิ่มเติม" rounded class="q-px-md" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </q-card>
-      </section>
-
-      <!-- [NEW] SCHOOL STATISTICS -->
-      <section class="q-mb-xl q-pb-md" style="border-bottom: 1px solid #eee;">
-        <div class="row q-col-gutter-lg justify-center">
-          <div class="col-6 col-md-3 text-center animate-fade-in-up delay-1">
-            <div class="text-h2 text-primary text-weight-bolder q-mb-xs">300<span class="text-h4 text-weight-bold">+</span></div>
-            <div class="text-subtitle1 text-grey-8 text-weight-medium">นักเรียนปัจจุบัน</div>
-          </div>
-          <div class="col-6 col-md-3 text-center animate-fade-in-up delay-2">
-            <div class="text-h2 text-secondary text-weight-bolder q-mb-xs">25<span class="text-h4 text-weight-bold">+</span></div>
-            <div class="text-subtitle1 text-grey-8 text-weight-medium">ครูและบุคลากร</div>
-          </div>
-          <div class="col-6 col-md-3 text-center animate-fade-in-up delay-3">
-            <div class="text-h2 text-accent text-weight-bolder q-mb-xs">40<span class="text-h4 text-weight-bold"> ปี</span></div>
-            <div class="text-subtitle1 text-grey-8 text-weight-medium">ก่อตั้งและพัฒนา</div>
-          </div>
-          <div class="col-6 col-md-3 text-center animate-fade-in-up delay-4">
-            <div class="text-h2 text-positive text-weight-bolder q-mb-xs">20<span class="text-h4 text-weight-bold">+</span></div>
-            <div class="text-subtitle1 text-grey-8 text-weight-medium">กิจกรรมพัฒนาผู้เรียน</div>
-          </div>
-        </div>
-      </section>
-
       <!-- [NEW] PARENT QUICK LINKS -->
       <section class="q-mb-xl">
         <div class="text-h4 text-primary text-weight-bold q-mb-lg text-center">บริการสำหรับผู้ปกครอง</div>
@@ -181,6 +128,59 @@
         </div>
         <div class="text-center q-mt-lg">
           <q-btn outline color="primary" label="ดูข่าวสารทั้งหมด" rounded class="q-px-lg" />
+        </div>
+      </section>
+
+      <!-- [NEW] DIRECTOR'S MESSAGE -->
+      <section class="q-mb-xl animate-fade-in-up">
+        <q-card flat bordered class="overflow-hidden bg-white" style="border-radius: 16px;">
+          <div class="row items-stretch">
+            <div class="col-12 col-md-4 bg-primary text-center q-pa-xl flex flex-center">
+              <div>
+                <q-avatar size="150px" class="shadow-4 q-mb-md" style="border: 4px solid white; background-color: white;">
+                  <img src="https://api.dicebear.com/7.x/initials/svg?seed=สมศักดิ์&backgroundColor=1976d2" />
+                </q-avatar>
+                <div class="text-h6 text-white text-weight-bold">นายสมศักดิ์ รักการศึกษา</div>
+                <div class="text-white" style="opacity: 0.9;">ผู้อำนวยการโรงเรียนบ้านท่าซุง</div>
+              </div>
+            </div>
+            <div class="col-12 col-md-8 q-pa-xl flex column justify-center relative-position">
+              <q-icon name="format_quote" color="grey-3" size="80px" class="absolute-top-right q-pa-md" style="z-index: 0;" />
+              <div style="z-index: 1;">
+                <div class="text-h4 text-primary text-weight-bold q-mb-md">สารจากผู้อำนวยการ</div>
+                <p class="text-body1 text-grey-8" style="line-height: 1.8;">
+                  "โรงเรียนบ้านท่าซุง มุ่งมั่นพัฒนาผู้เรียนให้มีความรู้คู่คุณธรรม ส่งเสริมทักษะวิชาการและทักษะชีวิตในศตวรรษที่ 21 
+                  ภายใต้สภาพแวดล้อมที่ปลอดภัยและเอื้อต่อการเรียนรู้ เราพร้อมที่จะร่วมมือกับผู้ปกครองและชุมชน 
+                  ในการสร้างอนาคตที่สดใสให้กับบุตรหลานของเราทุกคน เพราะเราเชื่อว่าเด็กทุกคนคืออนาคตของชาติ"
+                </p>
+                <div class="q-mt-lg">
+                  <q-btn outline color="primary" label="อ่านวิสัยทัศน์เพิ่มเติม" rounded class="q-px-md" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </q-card>
+      </section>
+
+      <!-- [NEW] SCHOOL STATISTICS -->
+      <section class="q-mb-xl q-pb-md" style="border-bottom: 1px solid #eee;">
+        <div class="row q-col-gutter-lg justify-center">
+          <div class="col-6 col-md-3 text-center animate-fade-in-up delay-1">
+            <div class="text-h2 text-primary text-weight-bolder q-mb-xs">300<span class="text-h4 text-weight-bold">+</span></div>
+            <div class="text-subtitle1 text-grey-8 text-weight-medium">นักเรียนปัจจุบัน</div>
+          </div>
+          <div class="col-6 col-md-3 text-center animate-fade-in-up delay-2">
+            <div class="text-h2 text-secondary text-weight-bolder q-mb-xs">25<span class="text-h4 text-weight-bold">+</span></div>
+            <div class="text-subtitle1 text-grey-8 text-weight-medium">ครูและบุคลากร</div>
+          </div>
+          <div class="col-6 col-md-3 text-center animate-fade-in-up delay-3">
+            <div class="text-h2 text-accent text-weight-bolder q-mb-xs">40<span class="text-h4 text-weight-bold"> ปี</span></div>
+            <div class="text-subtitle1 text-grey-8 text-weight-medium">ก่อตั้งและพัฒนา</div>
+          </div>
+          <div class="col-6 col-md-3 text-center animate-fade-in-up delay-4">
+            <div class="text-h2 text-positive text-weight-bolder q-mb-xs">20<span class="text-h4 text-weight-bold">+</span></div>
+            <div class="text-subtitle1 text-grey-8 text-weight-medium">กิจกรรมพัฒนาผู้เรียน</div>
+          </div>
         </div>
       </section>
 

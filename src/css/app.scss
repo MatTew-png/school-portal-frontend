@@ -1,7 +1,13 @@
 // app global css
 body {
   font-family: 'Prompt', sans-serif;
-  background-color: var(--q-background, #F9F9F9);
+  background-color: #F8FAF9;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(25, 118, 210, 0.06) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(38, 166, 154, 0.06) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(255, 193, 7, 0.04) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(25, 118, 210, 0.04) 0px, transparent 50%);
+  background-attachment: fixed;
   color: var(--q-dark, #333333);
 }
 
