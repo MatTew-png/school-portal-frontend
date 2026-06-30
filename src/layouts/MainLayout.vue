@@ -55,33 +55,40 @@
 
         <!-- Mobile Menu -->
         <div class="lt-md">
-          <q-btn flat round dense icon="menu" @click="toggleLeftDrawer" />
+          <q-btn flat round dense icon="menu" @click="toggleRightDrawer" />
         </div>
       </q-toolbar>
     </q-header>
 
     <!-- MOBILE DRAWER -->
-    <q-drawer v-model="leftDrawerOpen" side="left" bordered overlay>
-      <q-list class="q-mt-md">
-        <q-item clickable to="/">
+    <q-drawer v-model="rightDrawerOpen" side="right" bordered overlay>
+      <div class="row justify-between items-center q-pa-md bg-grey-1" style="border-bottom: 1px solid #eee;">
+        <div class="text-weight-bold text-primary text-subtitle1">เมนูหลัก</div>
+        <q-btn flat round dense icon="close" @click="rightDrawerOpen = false" color="grey-7" />
+      </div>
+      <q-list class="q-pt-sm">
+        <q-item clickable to="/" @click="rightDrawerOpen = false">
+          <q-item-section avatar><q-icon name="home" color="primary" /></q-item-section>
           <q-item-section>หน้าแรก</q-item-section>
         </q-item>
-        <q-item clickable>
+        <q-item clickable @click="rightDrawerOpen = false">
+          <q-item-section avatar><q-icon name="article" color="primary" /></q-item-section>
           <q-item-section>ข่าวสาร</q-item-section>
         </q-item>
-        <q-expansion-item label="ข้อมูลเพิ่มเติม">
-          <q-list class="q-pl-md">
-            <q-item clickable><q-item-section>ประวัติโรงเรียน</q-item-section></q-item>
-            <q-item clickable><q-item-section>ทำเนียบครู</q-item-section></q-item>
+        <q-expansion-item label="ข้อมูลเพิ่มเติม" icon="info" expand-separator class="text-primary">
+          <q-list class="q-pl-lg">
+            <q-item clickable @click="rightDrawerOpen = false"><q-item-section class="text-dark">ประวัติโรงเรียน</q-item-section></q-item>
+            <q-item clickable @click="rightDrawerOpen = false"><q-item-section class="text-dark">ทำเนียบครู</q-item-section></q-item>
           </q-list>
         </q-expansion-item>
-        <q-item class="q-mt-md">
+        <q-item class="q-mt-lg">
           <q-btn
             color="accent"
             text-color="dark"
             label="ระบบรับสมัคร"
-            class="full-width"
+            class="full-width text-weight-bold"
             unelevated
+            @click="rightDrawerOpen = false"
           />
         </q-item>
       </q-list>
@@ -226,10 +233,10 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-const leftDrawerOpen = ref(false);
+const rightDrawerOpen = ref(false);
 
-function toggleLeftDrawer() {
-  leftDrawerOpen.value = !leftDrawerOpen.value;
+function toggleRightDrawer() {
+  rightDrawerOpen.value = !rightDrawerOpen.value;
 }
 </script>
 
