@@ -22,23 +22,14 @@
           <!-- Dropdown -->
           <q-btn-dropdown flat label="ข้อมูลเพิ่มเติม">
             <q-list>
-              <q-item clickable v-close-popup>
+              <q-item clickable v-close-popup to="/about?tab=history">
                 <q-item-section>ประวัติโรงเรียน และตราสัญลักษณ์</q-item-section>
               </q-item>
-              <q-item clickable v-close-popup>
-                <q-item-section>คลิปวีดีโอแนะนำโรงเรียน</q-item-section>
-              </q-item>
-              <q-item clickable v-close-popup>
-                <q-item-section>คณะกรรมการบริหาร และที่ปรึกษา</q-item-section>
-              </q-item>
-              <q-item clickable v-close-popup>
-                <q-item-section>ทำเนียบครู</q-item-section>
-              </q-item>
-              <q-item clickable v-close-popup>
+              <q-item clickable v-close-popup to="/about?tab=chart">
                 <q-item-section>ผังโครงสร้างการบริหารงาน</q-item-section>
               </q-item>
-              <q-item clickable v-close-popup>
-                <q-item-section>แผนการเรียน ระดับประถม</q-item-section>
+              <q-item clickable v-close-popup to="/about?tab=teachers">
+                <q-item-section>ทำเนียบครูและบุคลากร</q-item-section>
               </q-item>
             </q-list>
           </q-btn-dropdown>
@@ -77,8 +68,9 @@
         </q-item>
         <q-expansion-item label="ข้อมูลเพิ่มเติม" icon="info" expand-separator class="text-primary">
           <q-list class="q-pl-lg">
-            <q-item clickable @click="rightDrawerOpen = false"><q-item-section class="text-dark">ประวัติโรงเรียน</q-item-section></q-item>
-            <q-item clickable @click="rightDrawerOpen = false"><q-item-section class="text-dark">ทำเนียบครู</q-item-section></q-item>
+            <q-item clickable to="/about?tab=history" @click="rightDrawerOpen = false"><q-item-section class="text-dark">ประวัติโรงเรียน</q-item-section></q-item>
+            <q-item clickable to="/about?tab=chart" @click="rightDrawerOpen = false"><q-item-section class="text-dark">โครงสร้างการบริหาร</q-item-section></q-item>
+            <q-item clickable to="/about?tab=teachers" @click="rightDrawerOpen = false"><q-item-section class="text-dark">ทำเนียบครู</q-item-section></q-item>
           </q-list>
         </q-expansion-item>
         <q-item class="q-mt-lg">
