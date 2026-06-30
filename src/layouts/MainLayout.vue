@@ -16,8 +16,8 @@
         <!-- Navigation Desktop -->
         <div class="gt-sm row items-center">
           <q-btn flat label="หน้าแรก" to="/" />
-          <q-btn flat label="ข่าวสาร" @click="scrollToNews" />
-          <q-btn flat label="ปฏิทินกิจกรรม" />
+          <q-btn flat label="ข่าวสาร" to="/news" />
+          <q-btn flat label="ปฏิทินกิจกรรม" to="/calendar" />
 
           <!-- Dropdown -->
           <q-btn-dropdown flat label="ข้อมูลเพิ่มเติม">
@@ -65,15 +65,13 @@
           <q-item-section avatar><q-icon name="home" color="primary" /></q-item-section>
           <q-item-section>หน้าแรก</q-item-section>
         </q-item>
-        <q-item
-          clickable
-          @click="
-            scrollToNews();
-            rightDrawerOpen = false;
-          "
-        >
+        <q-item clickable to="/news" @click="rightDrawerOpen = false">
           <q-item-section avatar><q-icon name="article" color="primary" /></q-item-section>
           <q-item-section>ข่าวสาร</q-item-section>
+        </q-item>
+        <q-item clickable to="/calendar" @click="rightDrawerOpen = false">
+          <q-item-section avatar><q-icon name="event" color="primary" /></q-item-section>
+          <q-item-section>ปฏิทินกิจกรรม</q-item-section>
         </q-item>
         <q-expansion-item label="ข้อมูลเพิ่มเติม" icon="info" expand-separator class="text-primary">
           <q-list class="q-pl-lg">
@@ -120,14 +118,23 @@
                 206 หมู่ 3 ต.ลาดกระทิง อ.สนามชัยเขต จ.ฉะเชิงเทรา 24160 | โทร: 089-9822037
               </div>
             </div>
-            
+
             <div class="col-12 col-md-6 text-center text-md-right">
               <div class="q-gutter-sm">
-                <q-btn flat round dense icon="facebook" type="a" href="https://www.facebook.com/Banthasungschool?ref=embed_page" target="_blank" />
+                <q-btn
+                  flat
+                  round
+                  dense
+                  icon="facebook"
+                  type="a"
+                  href="https://www.facebook.com/Banthasungschool?ref=embed_page"
+                  target="_blank"
+                />
                 <q-btn flat round dense icon="ondemand_video" />
               </div>
               <div class="text-caption text-grey-4 q-mt-xs">
-                &copy; 2026 โรงเรียนบ้านท่าซุง. All rights reserved. | <a href="#" class="text-grey-4">Teacher Portal</a>
+                &copy; 2026 โรงเรียนบ้านท่าซุง. All rights reserved. |
+                <a href="#" class="text-grey-4">Teacher Portal</a>
               </div>
             </div>
           </div>
@@ -139,29 +146,11 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useRouter, useRoute } from 'vue-router';
-
-const router = useRouter();
-const route = useRoute();
 const rightDrawerOpen = ref(false);
 
 function toggleRightDrawer() {
   rightDrawerOpen.value = !rightDrawerOpen.value;
 }
-
-const scrollToNews = () => {
-  if (route.path !== '/') {
-    void router.push('/').then(() => {
-      setTimeout(() => {
-        const el = document.getElementById('news-section');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }, 300);
-    });
-  } else {
-    const el = document.getElementById('news-section');
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  }
-};
 </script>
 
 <style scoped>

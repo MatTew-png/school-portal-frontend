@@ -44,16 +44,23 @@
 
             <q-card-section class="q-pt-md text-center">
               <q-avatar size="100px" class="q-mb-md shadow-1">
-                <img src="https://api.dicebear.com/7.x/initials/svg?seed=สมศักดิ์&backgroundColor=1976d2" />
+                <img
+                  src="https://api.dicebear.com/7.x/initials/svg?seed=สมศักดิ์&backgroundColor=1976d2"
+                />
               </q-avatar>
               <div class="text-h6 text-primary">นายสมศักดิ์ รักการศึกษา</div>
               <div class="text-subtitle2 text-grey-8 q-mb-md">ผู้อำนวยการโรงเรียนบ้านท่าซุง</div>
-              
-              <p class="text-body1 text-left" style="line-height: 1.6;">
-                "โรงเรียนบ้านท่าซุง มุ่งมั่นพัฒนาผู้เรียนให้มีความรู้คู่คุณธรรม ส่งเสริมทักษะวิชาการและทักษะชีวิตในศตวรรษที่ 21 เพื่อให้เด็กนักเรียนทุกคนเติบโตเป็นบุคลากรที่มีคุณภาพของสังคม 
+
+              <p class="text-body1 text-left" style="line-height: 1.6">
+                "โรงเรียนบ้านท่าซุง มุ่งมั่นพัฒนาผู้เรียนให้มีความรู้คู่คุณธรรม
+                ส่งเสริมทักษะวิชาการและทักษะชีวิตในศตวรรษที่ 21
+                เพื่อให้เด็กนักเรียนทุกคนเติบโตเป็นบุคลากรที่มีคุณภาพของสังคม
               </p>
-              <p class="text-body1 text-left" style="line-height: 1.6;">
-                พวกเราคณะครูและบุคลากรทางการศึกษาทุกคน พร้อมที่จะทุ่มเทแรงกายแรงใจในการจัดการเรียนการสอน สร้างสภาพแวดล้อมที่เอื้อต่อการเรียนรู้ และดูแลนักเรียนทุกคนเปรียบเสมือนลูกหลานของเราเอง"
+              <p class="text-body1 text-left" style="line-height: 1.6">
+                พวกเราคณะครูและบุคลากรทางการศึกษาทุกคน
+                พร้อมที่จะทุ่มเทแรงกายแรงใจในการจัดการเรียนการสอน
+                สร้างสภาพแวดล้อมที่เอื้อต่อการเรียนรู้
+                และดูแลนักเรียนทุกคนเปรียบเสมือนลูกหลานของเราเอง"
               </p>
             </q-card-section>
           </q-card>
@@ -65,17 +72,13 @@
             <q-icon name="family_restroom" class="q-mr-xs" /> เมนูสำหรับผู้ปกครอง
           </div>
           <q-list separator dense class="text-body2">
-            <q-item
-              clickable
-              tag="a"
-              href="https://drive.google.com/file/d/1_IvpsZ9n0OJX482ZkrrGwDg1srZwEjvh/view?pli=1"
-              target="_blank"
-              class="q-pa-sm hover-bg"
-            >
+            <q-item disable class="q-pa-sm">
               <q-item-section avatar min-width="30px"
-                ><q-icon name="menu_book" color="primary" size="sm"
+                ><q-icon name="menu_book" color="grey" size="sm"
               /></q-item-section>
-              <q-item-section>คู่มือนักเรียน / ดาวน์โหลดระเบียบการ</q-item-section>
+              <q-item-section class="text-grey"
+                >คู่มือนักเรียน / ดาวน์โหลดระเบียบการ</q-item-section
+              >
             </q-item>
             <q-item
               clickable
@@ -115,7 +118,6 @@
             </q-item>
           </q-list>
         </q-card>
-
 
         <!-- MAP -->
         <q-card flat bordered class="q-mb-sm bg-white" style="border-radius: 4px">
@@ -210,7 +212,7 @@
             class="bg-primary text-white q-pa-sm text-weight-bold flex items-center justify-between"
           >
             <div><q-icon name="newspaper" class="q-mr-xs" /> ข่าวเด่นโรงเรียน</div>
-            <q-btn flat dense size="sm" label="ดูทั้งหมด" />
+            <q-btn flat dense size="sm" label="ดูทั้งหมด" to="/news" />
           </div>
           <div class="q-pa-sm">
             <div
@@ -219,7 +221,11 @@
               @click="router.push(`/news/${featuredNews.id}?from=home`)"
             >
               <div class="col-5">
-                <img :src="featuredNews.image" class="rounded-borders border-grey full-width" style="aspect-ratio: 4/3; object-fit: cover; display: block;" />
+                <img
+                  :src="featuredNews.image"
+                  class="rounded-borders border-grey full-width"
+                  style="aspect-ratio: 4/3; object-fit: cover; display: block"
+                />
               </div>
               <div class="col-7 flex column justify-between">
                 <div>
@@ -259,7 +265,11 @@
                   @click="router.push(`/news/${item.id}?from=home`)"
                 >
                   <div class="col-3">
-                    <img :src="item.image" class="rounded-borders border-grey full-width" style="aspect-ratio: 16/9; object-fit: cover; display: block;" />
+                    <img
+                      :src="item.image"
+                      class="rounded-borders border-grey full-width"
+                      style="aspect-ratio: 16/9; object-fit: cover; display: block"
+                    />
                   </div>
                   <div class="col-9">
                     <div class="text-body2 text-weight-bold text-dark ellipsis">
@@ -356,7 +366,7 @@
             </q-item>
           </q-list>
           <div class="q-pa-xs text-center bg-grey-2 border-top-dashed">
-            <q-btn flat dense color="primary" label="ปฏิทินทั้งหมด" size="sm" />
+            <q-btn flat dense color="primary" label="ปฏิทินทั้งหมด" size="sm" to="/calendar" />
           </div>
         </q-card>
 
@@ -492,13 +502,25 @@ const activities = [
 
 /* --- Mobile Reordering --- */
 @media (min-width: 1024px) {
-  .col-left { order: 1; }
-  .col-middle { order: 2; }
-  .col-right { order: 3; }
+  .col-left {
+    order: 1;
+  }
+  .col-middle {
+    order: 2;
+  }
+  .col-right {
+    order: 3;
+  }
 }
 @media (max-width: 1023px) {
-  .col-middle { order: 1; }
-  .col-left { order: 2; }
-  .col-right { order: 3; }
+  .col-middle {
+    order: 1;
+  }
+  .col-left {
+    order: 2;
+  }
+  .col-right {
+    order: 3;
+  }
 }
 </style>
