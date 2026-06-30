@@ -12,7 +12,7 @@
       class="text-white"
     >
       <q-carousel-slide name="1" img-src="/hero1.png">
-        <div class="absolute-bottom custom-caption">
+        <div class="absolute-bottom custom-caption animate-fade-in-up">
           <div class="text-h3 text-weight-bold q-mb-sm">โรงเรียนบ้านท่าซุง</div>
           <div class="text-h5">"เรียนดี วินัยเด่น เน้นคุณธรรม"</div>
           <q-btn color="accent" text-color="dark" label="รู้จักเรามากขึ้น" class="q-mt-md text-weight-bold" unelevated size="lg" />
@@ -20,14 +20,14 @@
       </q-carousel-slide>
       
       <q-carousel-slide name="2" img-src="/hero2.png">
-        <div class="absolute-bottom custom-caption">
+        <div class="absolute-bottom custom-caption animate-fade-in-up">
           <div class="text-h3 text-weight-bold q-mb-sm">บรรยากาศการเรียนการสอน</div>
           <div class="text-h5">ส่งเสริมการเรียนรู้ด้วยเทคโนโลยีที่ทันสมัย</div>
         </div>
       </q-carousel-slide>
       
       <q-carousel-slide name="3" img-src="/hero3.png">
-        <div class="absolute-bottom custom-caption">
+        <div class="absolute-bottom custom-caption animate-fade-in-up">
           <div class="text-h3 text-weight-bold q-mb-sm">กิจกรรมสร้างสรรค์</div>
           <div class="text-h5">พัฒนาร่างกายและจิตใจให้แข็งแรงสมบูรณ์</div>
         </div>
@@ -35,7 +35,7 @@
     </q-carousel>
 
     <!-- [NEW] ADMISSIONS BANNER -->
-    <div class="bg-secondary text-dark text-center q-pa-md q-mb-xl shadow-2">
+    <div class="bg-secondary text-dark text-center q-pa-md q-mb-xl shadow-2 animate-fade-in">
       <div class="row items-center justify-center q-gutter-md">
         <q-icon name="campaign" size="36px" color="primary" /> 
         <div class="text-h5 text-weight-bold">เปิดรับสมัครนักเรียนใหม่ ประจำปีการศึกษา 2568</div>
@@ -48,22 +48,22 @@
       <section class="q-mb-xl">
         <div class="text-h4 text-primary text-weight-bold q-mb-lg text-center">บริการสำหรับผู้ปกครอง</div>
         <div class="row q-col-gutter-lg justify-center">
-          <div class="col-6 col-md-3 text-center">
+          <div class="col-6 col-md-3 text-center animate-fade-in-up delay-1">
             <q-btn type="a" href="https://drive.google.com/file/d/1_IvpsZ9n0OJX482ZkrrGwDg1srZwEjvh/view?pli=1" target="_blank" round color="blue-1" text-color="blue-8" size="32px" icon="menu_book" class="q-mb-sm shadow-3 transition-transform hover-scale" />
             <div class="text-h6 text-weight-bold">คู่มือนักเรียน</div>
             <div class="text-caption text-grey">ดาวน์โหลดระเบียบการ</div>
           </div>
-          <div class="col-6 col-md-3 text-center">
+          <div class="col-6 col-md-3 text-center animate-fade-in-up delay-2">
             <q-btn type="a" href="https://www.facebook.com/Banthasungschool" target="_blank" round color="indigo-1" text-color="indigo-8" size="32px" icon="facebook" class="q-mb-sm shadow-3 transition-transform hover-scale" />
             <div class="text-h6 text-weight-bold">ติดตามข่าวสาร</div>
             <div class="text-caption text-grey">เพจเฟสบุ๊คโรงเรียน</div>
           </div>
-          <div class="col-6 col-md-3 text-center">
+          <div class="col-6 col-md-3 text-center animate-fade-in-up delay-3">
             <q-btn type="a" href="https://m.me/Banthasungschool" target="_blank" round color="light-blue-1" text-color="light-blue-8" size="32px" icon="chat" class="q-mb-sm shadow-3 transition-transform hover-scale" />
             <div class="text-h6 text-weight-bold">ติดต่อสอบถาม</div>
             <div class="text-caption text-grey">ทักแชท Messenger</div>
           </div>
-          <div class="col-6 col-md-3 text-center">
+          <div class="col-6 col-md-3 text-center animate-fade-in-up delay-4">
             <q-btn type="a" href="https://maps.app.goo.gl/tBq3RzQjVfUfHpHV6" target="_blank" round color="red-1" text-color="red-8" size="32px" icon="place" class="q-mb-sm shadow-3 transition-transform hover-scale" />
             <div class="text-h6 text-weight-bold">แผนที่โรงเรียน</div>
             <div class="text-caption text-grey">การเดินทางมาติดต่อ</div>
@@ -76,7 +76,7 @@
         <div class="text-h4 text-primary text-weight-bold q-mb-lg text-center">ข่าวสารและประกาศ</div>
         <div class="row q-col-gutter-lg">
           
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 animate-fade-in-up delay-1">
             <q-card class="my-card h-100 shadow-2 hover-card">
               <q-img src="/hero1.png" height="200px" />
               <q-card-section>
@@ -92,7 +92,7 @@
             </q-card>
           </div>
 
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 animate-fade-in-up delay-2">
             <q-card class="my-card h-100 shadow-2 hover-card">
               <q-img src="/hero2.png" height="200px" />
               <q-card-section>
@@ -108,7 +108,7 @@
             </q-card>
           </div>
 
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 animate-fade-in-up delay-3">
             <q-card class="my-card h-100 shadow-2 hover-card">
               <q-img src="/hero3.png" height="200px" />
               <q-card-section>
@@ -133,37 +133,67 @@
       <!-- CALENDAR & ACTIVITY GALLERY ROW -->
       <section class="row q-col-gutter-xl q-mb-xl">
         <!-- CALENDAR -->
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 animate-fade-in-up delay-1">
           <div class="text-h5 text-primary text-weight-bold q-mb-md"><q-icon name="event" class="q-mr-sm"/>ปฏิทินกิจกรรม</div>
           <q-card flat bordered class="bg-white shadow-2 overflow-hidden" style="border-radius: 12px;">
             <div class="row items-center justify-between q-pa-sm bg-primary text-white">
-              <q-btn flat round dense icon="chevron_left" size="sm" />
-              <div class="text-weight-bold">พฤษภาคม 2568</div>
-              <q-btn flat round dense icon="chevron_right" size="sm" />
-            </div>
-            
-            <div class="row text-center text-weight-bold text-grey-8 bg-grey-2 q-py-xs" style="font-size: 11px;">
-              <div class="col text-red">อา</div>
-              <div class="col">จ</div>
-              <div class="col">อ</div>
-              <div class="col">พ</div>
-              <div class="col">พฤ</div>
-              <div class="col">ศ</div>
-              <div class="col">ส</div>
-            </div>
-            
-            <div class="row" style="border-top: 1px solid #eee;">
-              <div v-for="blank in startDayOfWeek" :key="'blank'+blank" style="width: 14.28%; border-right: 1px solid #eee; border-bottom: 1px solid #eee; min-height: 55px; background: #fafafa;"></div>
-              
-              <div v-for="day in daysInMonth" :key="'day'+day" class="q-pa-xs" style="width: 14.28%; border-right: 1px solid #eee; border-bottom: 1px solid #eee; min-height: 55px;">
-                <div class="text-right text-caption" :class="(day + startDayOfWeek) % 7 === 1 ? 'text-red text-weight-bold' : 'text-grey-9'">{{ day }}</div>
-                <template v-if="events[day]">
-                  <div v-for="(ev, idx) in events[day]" :key="'ev'+day+idx" :class="ev.color" class="text-white q-px-xs q-mt-xs" style="border-radius: 3px; font-size: 9px; line-height: 1.4; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;" :title="ev.title">
-                    {{ ev.title }}
-                  </div>
-                </template>
+              <div class="row items-center">
+                <q-btn flat round dense icon="chevron_left" size="sm" />
+                <div class="text-weight-bold q-mx-sm">พฤษภาคม 2568</div>
+                <q-btn flat round dense icon="chevron_right" size="sm" />
               </div>
+              <q-btn-group outline rounded class="bg-primary shadow-0" style="border: 1px solid rgba(255,255,255,0.3)">
+                <q-btn dense size="sm" class="q-px-sm" :color="calendarMode === 'grid' ? 'white' : 'transparent'" :text-color="calendarMode === 'grid' ? 'primary' : 'white'" icon="grid_view" @click="calendarMode = 'grid'" />
+                <q-btn dense size="sm" class="q-px-sm" :color="calendarMode === 'list' ? 'white' : 'transparent'" :text-color="calendarMode === 'list' ? 'primary' : 'white'" icon="view_agenda" @click="calendarMode = 'list'" />
+              </q-btn-group>
             </div>
+            
+            <template v-if="calendarMode === 'grid'">
+              <div class="row text-center text-weight-bold text-grey-8 bg-grey-2 q-py-xs" style="font-size: 11px;">
+                <div class="col text-red">อา</div>
+                <div class="col">จ</div>
+                <div class="col">อ</div>
+                <div class="col">พ</div>
+                <div class="col">พฤ</div>
+                <div class="col">ศ</div>
+                <div class="col">ส</div>
+              </div>
+              
+              <div class="row" style="border-top: 1px solid #eee;">
+                <div v-for="blank in startDayOfWeek" :key="'blank'+blank" style="width: 14.28%; border-right: 1px solid #eee; border-bottom: 1px solid #eee; min-height: 55px; background: #fafafa;"></div>
+                
+                <div v-for="day in daysInMonth" :key="'day'+day" class="q-pa-xs" style="width: 14.28%; border-right: 1px solid #eee; border-bottom: 1px solid #eee; min-height: 55px;">
+                  <div class="text-right text-caption" :class="(day + startDayOfWeek) % 7 === 1 ? 'text-red text-weight-bold' : 'text-grey-9'">{{ day }}</div>
+                  <template v-if="events[day]">
+                    <div v-for="(ev, idx) in events[day]" :key="'ev'+day+idx" :class="ev.color" class="text-white q-px-xs q-mt-xs" style="border-radius: 3px; font-size: 9px; line-height: 1.4; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;" :title="ev.title">
+                      {{ ev.title }}
+                    </div>
+                  </template>
+                </div>
+              </div>
+            </template>
+            
+            <template v-else>
+              <q-list separator class="bg-white" style="height: 310px; overflow-y: auto;">
+                <q-item v-for="(ev, index) in eventsList" :key="index" class="q-py-md">
+                  <q-item-section avatar>
+                    <q-avatar :class="ev.color" text-color="white" size="42px" font-size="16px" class="shadow-1 text-weight-bold">
+                      {{ ev.day }}
+                    </q-avatar>
+                  </q-item-section>
+                  <q-item-section>
+                    <q-item-label class="text-weight-bold text-grey-9 text-body1">{{ ev.title }}</q-item-label>
+                    <q-item-label caption class="text-primary"><q-icon name="event" class="q-mr-xs"/> พฤษภาคม 2568</q-item-label>
+                  </q-item-section>
+                  <q-item-section side>
+                    <q-btn flat round dense icon="chevron_right" color="grey-5" />
+                  </q-item-section>
+                </q-item>
+                <q-item v-if="eventsList.length === 0">
+                  <q-item-section class="text-center text-grey q-pa-lg">ไม่มีกิจกรรมในเดือนนี้</q-item-section>
+                </q-item>
+              </q-list>
+            </template>
             <div class="q-pa-sm text-center bg-grey-1">
               <q-btn flat color="primary" label="ดูปฏิทินทั้งหมด" size="sm" />
             </div>
@@ -171,7 +201,7 @@
         </div>
 
         <!-- ACTIVITY GALLERY (ENHANCED) -->
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-md-8 animate-fade-in-up delay-2">
           <div class="row items-center justify-between q-mb-md">
             <div class="text-h5 text-primary text-weight-bold"><q-icon name="photo_library" class="q-mr-sm"/>ภาพกิจกรรมล่าสุด</div>
             <q-tabs v-model="tab" dense class="text-grey" active-color="primary" indicator-color="primary" align="right" narrow-indicator>
@@ -211,7 +241,7 @@
         <div class="text-h4 text-primary text-weight-bold q-mb-lg text-center">ทำเนียบคุณครูประจำชั้น</div>
         <div class="row q-col-gutter-lg justify-center">
           
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 animate-fade-in-up delay-1">
             <q-card flat bordered class="text-center q-pa-lg" style="border-radius: 16px; border-top: 4px solid var(--q-primary);">
               <div class="text-h6 text-weight-bold q-mb-md">สายชั้นอนุบาล</div>
               <div class="row justify-center q-gutter-md">
@@ -233,7 +263,7 @@
             </q-card>
           </div>
           
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 animate-fade-in-up delay-2">
             <q-card flat bordered class="text-center q-pa-lg" style="border-radius: 16px; border-top: 4px solid var(--q-secondary);">
               <div class="text-h6 text-weight-bold q-mb-md">สายชั้น ป.1 - ป.3</div>
               <div class="row justify-center q-gutter-md">
@@ -255,7 +285,7 @@
             </q-card>
           </div>
           
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 animate-fade-in-up delay-3">
             <q-card flat bordered class="text-center q-pa-lg" style="border-radius: 16px; border-top: 4px solid var(--q-accent);">
               <div class="text-h6 text-weight-bold q-mb-md">สายชั้น ป.4 - ป.6</div>
               <div class="row justify-center q-gutter-md">
@@ -276,7 +306,6 @@
               </div>
             </q-card>
           </div>
-          
         </div>
       </section>
 
@@ -296,10 +325,22 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed, watch, onMounted } from 'vue';
+import { useQuasar } from 'quasar';
+
+const $q = useQuasar();
 
 const slide = ref('1');
 const tab = ref('all');
+const calendarMode = ref('grid');
+
+onMounted(() => {
+  calendarMode.value = $q.screen.lt.sm ? 'list' : 'grid';
+});
+
+watch(() => $q.screen.lt.sm, (isMobile) => {
+  calendarMode.value = isMobile ? 'list' : 'grid';
+});
 
 // Calendar Data Mock
 const daysInMonth = Array.from({length: 31}, (_, i) => i + 1);
@@ -310,6 +351,14 @@ const events = {
   13: [{ title: 'วันพืชมงคล', color: 'bg-green-7' }],
   15: [{ title: 'เปิดเทอม 1/68', color: 'bg-blue-7' }]
 } as Record<number, {title: string, color: string}[]>;
+
+const eventsList = computed(() => {
+  const list: { day: number; title: string; color: string }[] = [];
+  for (let i = 1; i <= 31; i++) {
+    events[i]?.forEach(ev => list.push({ day: i, title: ev.title, color: ev.color }));
+  }
+  return list;
+});
 
 // Activities Data Mock (Realistic)
 const activities = [
