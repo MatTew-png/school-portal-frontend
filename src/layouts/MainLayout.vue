@@ -134,7 +134,7 @@
               </div>
               <div class="text-caption text-grey-4 q-mt-xs">
                 &copy; 2026 โรงเรียนบ้านท่าซุง. All rights reserved. |
-                <a href="#" class="text-grey-4">Teacher Portal</a>
+                <router-link to="/admin" class="text-grey-4 text-weight-medium" style="text-decoration: none;">ระบบจัดการหลังบ้าน (Admin)</router-link>
               </div>
             </div>
           </div>

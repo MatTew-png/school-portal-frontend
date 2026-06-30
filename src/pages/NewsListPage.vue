@@ -1,13 +1,19 @@
 <template>
   <q-page class="bg-grey-2 q-pa-md">
     <!-- PAGE HEADER -->
-    <q-card flat class="q-mb-md bg-secondary text-white shadow-3" style="border-radius: 12px; overflow: hidden;">
-      <q-img src="/hero2.png" style="height: 160px; opacity: 0.7;" />
-      <div class="absolute-full flex flex-center column" style="background: rgba(0,0,0,0.25)">
+    <q-card
+      flat
+      class="q-mb-md bg-secondary text-white shadow-3"
+      style="border-radius: 12px; overflow: hidden"
+    >
+      <q-img src="/hero2.png" style="height: 160px; opacity: 0.7" />
+      <div class="absolute-full flex flex-center column" style="background: rgba(0, 0, 0, 0.25)">
         <div class="text-h3 text-weight-bold flex items-center text-center">
           <q-icon name="campaign" class="q-mr-md" size="xl" /> ข่าวสารและประกาศ
         </div>
-        <div class="text-subtitle1 q-mt-sm text-center">อัปเดตข่าวสารและกิจกรรมล่าสุดจากโรงเรียนบ้านท่าซุง</div>
+        <div class="text-subtitle1 q-mt-sm text-center">
+          อัปเดตข่าวสารและกิจกรรมล่าสุดจากโรงเรียนบ้านท่าซุง
+        </div>
       </div>
     </q-card>
 
@@ -19,7 +25,7 @@
         v-model="searchQuery"
         placeholder="ค้นหาหัวข้อข่าว หรือเนื้อหา..."
         class="bg-white shadow-1"
-        style="min-width: 300px; border-radius: 8px;"
+        style="min-width: 300px; border-radius: 8px"
       >
         <template v-slot:append>
           <q-icon name="search" color="primary" />

@@ -13,6 +13,16 @@ const routes: RouteRecordRaw[] = [
     ],
   },
 
+  {
+    path: '/admin',
+    component: () => import('@/layouts/AdminLayout.vue'),
+    children: [
+      { path: '', component: () => import('@/pages/admin/DashboardPage.vue') },
+      { path: 'news', component: () => import('@/pages/admin/NewsManagePage.vue') },
+      { path: 'events', component: () => import('@/pages/admin/EventsManagePage.vue') },
+    ],
+  },
+
   // Always leave this as last one,
   // but you can also remove it
   {

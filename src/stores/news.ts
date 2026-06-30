@@ -106,5 +106,19 @@ export const useNewsStore = defineStore('news', {
         }, 200);
       });
     },
+    addNews(news: Omit<NewsItem, 'id' | 'views'>) {
+      const newId = String(Date.now());
+      this.newsList.unshift({ ...news, id: newId, views: 0 });
+    },
+    updateNews(id: string, updatedNews: Partial<NewsItem>) {
+      const index = this.newsList.findIndex((n) => n.id === id);
+      if (index !== -1) {
+        const target = this.newsList[index];
+        if (target) Object.assign(target, updatedNews);
+      }
+    },
+    deleteNews(id: string) {
+      this.newsList = this.newsList.filter((n) => n.id !== id);
+    },
   },
 });

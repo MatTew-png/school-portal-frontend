@@ -184,24 +184,42 @@
         <q-card
           flat
           class="q-mb-sm text-white"
-          style="border-radius: 8px; background: linear-gradient(135deg, #e53935 0%, #b71c1c 100%); box-shadow: 0 4px 15px rgba(229,57,53,0.3);"
+          style="
+            border-radius: 8px;
+            background: linear-gradient(135deg, #e53935 0%, #b71c1c 100%);
+            box-shadow: 0 4px 15px rgba(229, 57, 53, 0.3);
+          "
         >
           <div class="row items-center no-wrap q-py-sm q-px-md">
-            <div class="row items-center q-mr-sm text-weight-bold" style="min-width: max-content; z-index: 1;">
-              <q-icon name="campaign" size="sm" class="q-mr-xs pulse-icon text-yellow-3" /> 
-              <span class="text-subtitle2" style="letter-spacing: 0.5px;">ประกาศด่วน</span>
-              <div class="q-ml-md" style="width: 2px; height: 18px; background-color: rgba(255,255,255,0.4);"></div>
+            <div
+              class="row items-center q-mr-sm text-weight-bold"
+              style="min-width: max-content; z-index: 1"
+            >
+              <q-icon name="campaign" size="sm" class="q-mr-xs pulse-icon text-yellow-3" />
+              <span class="text-subtitle2" style="letter-spacing: 0.5px">ประกาศด่วน</span>
+              <div
+                class="q-ml-md"
+                style="width: 2px; height: 18px; background-color: rgba(255, 255, 255, 0.4)"
+              ></div>
             </div>
-            
-            <div class="ticker-wrap cursor-pointer" @click="router.push('/news/' + (fastNotices[0]?.id || 1))">
+
+            <div
+              class="ticker-wrap cursor-pointer"
+              @click="router.push('/news/' + (fastNotices[0]?.id || 1))"
+            >
               <div class="ticker-content text-body2 text-weight-bold">
-                <span
-                  v-for="(notice, i) in fastNotices"
-                  :key="i"
-                  class="q-mr-xl"
-                >
-                  <q-icon name="label_important" color="yellow-3" size="xs" class="q-mr-xs" style="vertical-align: text-bottom;" />
-                  {{ notice.title }} <span style="opacity: 0.8; font-weight: normal; font-size: 0.9em;">({{ notice.date }})</span>
+                <span v-for="(notice, i) in fastNotices" :key="i" class="q-mr-xl">
+                  <q-icon
+                    name="label_important"
+                    color="yellow-3"
+                    size="xs"
+                    class="q-mr-xs"
+                    style="vertical-align: text-bottom"
+                  />
+                  {{ notice.title }}
+                  <span style="opacity: 0.8; font-weight: normal; font-size: 0.9em"
+                    >({{ notice.date }})</span
+                  >
                 </span>
               </div>
             </div>
@@ -426,9 +444,11 @@
 import { ref, computed, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { useNewsStore } from '@/stores/news';
+import { useEventsStore } from '@/stores/events';
 
 const router = useRouter();
 const newsStore = useNewsStore();
+const eventsStore = useEventsStore();
 
 const slide = ref('1');
 const searchQuery = ref('');
@@ -451,21 +471,17 @@ onMounted(() => {
   void newsStore.fetchNews();
 });
 
-// Calendar Data Mock
-const events = {
-  1: [{ title: 'วันแรงงานแห่งชาติ', color: 'bg-green-8' }],
-  4: [{ title: 'วันฉัตรมงคล', color: 'bg-green-8' }],
-  13: [{ title: 'วันพืชมงคล', color: 'bg-green-8' }],
-  15: [{ title: 'เปิดเทอม 1/2568', color: 'bg-green-8' }],
-  22: [{ title: 'ประชุมผู้ปกครอง', color: 'bg-orange-6' }],
-} as Record<number, { title: string; color: string }[]>;
-
+// Calendar Data from Store
 const eventsList = computed(() => {
-  const list: { day: number; title: string; color: string }[] = [];
-  for (let i = 1; i <= 31; i++) {
-    events[i]?.forEach((ev) => list.push({ day: i, title: ev.title, color: ev.color }));
-  }
-  return list;
+  return eventsStore.eventsList.slice(0, 5).map((e) => {
+    const parts = e.dateStr.split('/');
+    const d = parts[2] || '1';
+    return {
+      day: parseInt(d, 10),
+      title: e.title,
+      color: e.color,
+    };
+  });
 });
 
 // Activities Data Mock
@@ -507,9 +523,18 @@ const activities = [
   animation: pulse 2s infinite;
 }
 @keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.15); opacity: 0.7; }
-  100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 .border-grey {
   border: 1px solid #e0e0e0;
