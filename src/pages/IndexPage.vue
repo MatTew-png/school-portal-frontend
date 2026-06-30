@@ -28,9 +28,36 @@
               label="อ่านต่อ"
               size="sm"
               class="full-width q-mt-xs"
+              @click="showDirectorMessage = true"
             />
           </div>
         </q-card>
+
+        <!-- DIRECTOR MESSAGE DIALOG -->
+        <q-dialog v-model="showDirectorMessage">
+          <q-card style="min-width: 350px; max-width: 500px">
+            <q-card-section class="bg-primary text-white row items-center">
+              <div class="text-h6">สารจากผู้อำนวยการ</div>
+              <q-space />
+              <q-btn icon="close" flat round dense v-close-popup />
+            </q-card-section>
+
+            <q-card-section class="q-pt-md text-center">
+              <q-avatar size="100px" class="q-mb-md shadow-1">
+                <img src="https://api.dicebear.com/7.x/initials/svg?seed=สมศักดิ์&backgroundColor=1976d2" />
+              </q-avatar>
+              <div class="text-h6 text-primary">นายสมศักดิ์ รักการศึกษา</div>
+              <div class="text-subtitle2 text-grey-8 q-mb-md">ผู้อำนวยการโรงเรียนบ้านท่าซุง</div>
+              
+              <p class="text-body1 text-left" style="line-height: 1.6;">
+                "โรงเรียนบ้านท่าซุง มุ่งมั่นพัฒนาผู้เรียนให้มีความรู้คู่คุณธรรม ส่งเสริมทักษะวิชาการและทักษะชีวิตในศตวรรษที่ 21 เพื่อให้เด็กนักเรียนทุกคนเติบโตเป็นบุคลากรที่มีคุณภาพของสังคม 
+              </p>
+              <p class="text-body1 text-left" style="line-height: 1.6;">
+                พวกเราคณะครูและบุคลากรทางการศึกษาทุกคน พร้อมที่จะทุ่มเทแรงกายแรงใจในการจัดการเรียนการสอน สร้างสภาพแวดล้อมที่เอื้อต่อการเรียนรู้ และดูแลนักเรียนทุกคนเปรียบเสมือนลูกหลานของเราเอง"
+              </p>
+            </q-card-section>
+          </q-card>
+        </q-dialog>
 
         <!-- PARENT QUICK LINKS -->
         <q-card flat bordered class="q-mb-sm bg-white" style="border-radius: 4px">
@@ -418,6 +445,7 @@ const newsStore = useNewsStore();
 
 const slide = ref('1');
 const searchQuery = ref('');
+const showDirectorMessage = ref(false);
 
 const latestNews = computed(() => newsStore.getLatestNews);
 const featuredNews = computed(() => (latestNews.value.length > 0 ? latestNews.value[0] : null));
