@@ -16,7 +16,7 @@
         <!-- Navigation Desktop -->
         <div class="gt-sm row items-center">
           <q-btn flat label="หน้าแรก" to="/" />
-          <q-btn flat label="ข่าวสาร" to="/news" />
+          <q-btn flat label="ข่าวสาร" @click="scrollToNews" />
           <q-btn flat label="ปฏิทินกิจกรรม" />
 
           <!-- Dropdown -->
@@ -62,7 +62,7 @@
           <q-item-section avatar><q-icon name="home" color="primary" /></q-item-section>
           <q-item-section>หน้าแรก</q-item-section>
         </q-item>
-        <q-item clickable to="/news" @click="rightDrawerOpen = false">
+        <q-item clickable @click="scrollToNews(); rightDrawerOpen = false">
           <q-item-section avatar><q-icon name="article" color="primary" /></q-item-section>
           <q-item-section>ข่าวสาร</q-item-section>
         </q-item>
@@ -199,6 +199,20 @@
 
           <q-separator color="white" class="q-my-lg opacity-50" style="opacity: 0.3" />
 
+          <!-- Teacher Portal Links -->
+          <div class="text-center">
+            <div class="text-subtitle1 text-white text-weight-bold q-mb-sm">
+              <q-icon name="lock" class="q-mr-xs" /> สำหรับบุคลากรภายใน (Teacher Portal)
+            </div>
+            <div class="row q-gutter-sm justify-center">
+              <q-btn outline color="white" icon="dns" label="ระบบ BookMark" size="sm" class="opacity-80 hover-opacity-100" />
+              <q-btn outline color="white" icon="font_download" label="ดาวน์โหลด 13 ฟอนต์ราชการ" size="sm" class="opacity-80 hover-opacity-100" />
+              <q-btn outline color="white" icon="description" label="แบบฟอร์มเอกสารต่างๆ" size="sm" class="opacity-80 hover-opacity-100" />
+            </div>
+          </div>
+
+          <q-separator color="white" class="q-my-lg opacity-50" style="opacity: 0.3" />
+
           <!-- Bottom Footer -->
           <div class="row items-center justify-between">
             <div>&copy; 2026 โรงเรียนบ้านท่าซุง. All rights reserved.</div>
@@ -224,12 +238,29 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
 
+const router = useRouter();
+const route = useRoute();
 const rightDrawerOpen = ref(false);
 
 function toggleRightDrawer() {
   rightDrawerOpen.value = !rightDrawerOpen.value;
 }
+
+const scrollToNews = () => {
+  if (route.path !== '/') {
+    void router.push('/').then(() => {
+      setTimeout(() => {
+        const el = document.getElementById('news-section');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+    });
+  } else {
+    const el = document.getElementById('news-section');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+};
 </script>
 
 <style scoped>

@@ -57,9 +57,9 @@
           <q-btn 
             color="primary" 
             outline 
-            :label="route.query.from === 'home' ? 'กลับไปหน้าแรก' : 'กลับไปหน้ารวมข่าวสาร'" 
+            label="กลับไปหน้าแรก" 
             icon="arrow_back" 
-            :to="route.query.from === 'home' ? '/' : '/news'" 
+            to="/#news-section" 
             class="q-px-lg" 
             rounded 
             size="lg" 
