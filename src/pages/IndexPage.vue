@@ -116,32 +116,7 @@
           </q-list>
         </q-card>
 
-        <!-- TEACHER PORTAL -->
-        <q-card flat bordered class="q-mb-sm bg-white" style="border-radius: 4px">
-          <div class="bg-accent text-dark q-pa-sm text-weight-bold flex items-center">
-            <q-icon name="school" class="q-mr-xs" /> ระบบสารสนเทศภายใน
-          </div>
-          <q-list separator dense class="text-body2">
-            <q-item clickable class="q-pa-sm hover-bg">
-              <q-item-section avatar min-width="30px"
-                ><q-icon name="assignment" color="orange" size="sm"
-              /></q-item-section>
-              <q-item-section>ระบบบันทึกคะแนน (SGS)</q-item-section>
-            </q-item>
-            <q-item clickable class="q-pa-sm hover-bg">
-              <q-item-section avatar min-width="30px"
-                ><q-icon name="email" color="red" size="sm"
-              /></q-item-section>
-              <q-item-section>อีเมลบุคลากร (Webmail)</q-item-section>
-            </q-item>
-            <q-item clickable class="q-pa-sm hover-bg">
-              <q-item-section avatar min-width="30px"
-                ><q-icon name="folder_shared" color="green" size="sm"
-              /></q-item-section>
-              <q-item-section>ระบบคลังข้อสอบ</q-item-section>
-            </q-item>
-          </q-list>
-        </q-card>
+
         <!-- MAP -->
         <q-card flat bordered class="q-mb-sm bg-white" style="border-radius: 4px">
           <div class="bg-primary text-white q-pa-sm text-weight-bold flex items-center">
