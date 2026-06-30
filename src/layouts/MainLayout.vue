@@ -16,7 +16,7 @@
         <!-- Navigation Desktop -->
         <div class="gt-sm row items-center">
           <q-btn flat label="หน้าแรก" to="/" />
-          <q-btn flat label="ข่าวสาร" />
+          <q-btn flat label="ข่าวสาร" to="/news" />
           <q-btn flat label="ปฏิทินกิจกรรม" />
 
           <!-- Dropdown -->
@@ -62,7 +62,7 @@
           <q-item-section avatar><q-icon name="home" color="primary" /></q-item-section>
           <q-item-section>หน้าแรก</q-item-section>
         </q-item>
-        <q-item clickable @click="rightDrawerOpen = false">
+        <q-item clickable to="/news" @click="rightDrawerOpen = false">
           <q-item-section avatar><q-icon name="article" color="primary" /></q-item-section>
           <q-item-section>ข่าวสาร</q-item-section>
         </q-item>

@@ -129,22 +129,27 @@
 
       <!-- NEWS BOARD -->
       <section class="q-mb-xl">
-        <div class="text-h4 text-primary text-weight-bold q-mb-lg text-center">
-          ข่าวสารและประกาศ
+        <div class="row justify-between items-end q-mb-lg">
+          <div class="text-h4 text-primary text-weight-bold">
+            ข่าวสารและประกาศ
+          </div>
+          <q-btn flat color="primary" label="ดูข่าวทั้งหมด" icon-right="arrow_forward" to="/news" />
         </div>
-        <div class="row q-col-gutter-lg">
-          <div class="col-12 col-md-4 animate-fade-in-up delay-1">
-            <q-card class="my-card h-100 shadow-2 hover-card">
-              <q-img src="/hero1.png" height="200px" />
+        
+        <div class="row q-col-gutter-lg justify-center">
+          <div class="col-12 col-sm-6 col-md-4 animate-fade-in-up" v-for="(item, index) in latestNews" :key="item.id" :style="{ animationDelay: `${index * 0.1}s` }">
+            <q-card class="my-card h-100 shadow-2 hover-card" @click="router.push(`/news/${item.id}?from=home`)" style="cursor: pointer; border-radius: 12px; overflow: hidden;">
+              <q-img :src="item.image" height="200px" />
               <q-card-section>
-                <div class="text-overline text-accent">ประกาศรับสมัคร</div>
-                <div class="text-h6 q-mt-sm q-mb-xs">
-                  ประกาศรายชื่อผู้มีสิทธิ์เข้าศึกษาต่อ ชั้น ป.1
+                <div class="text-overline text-accent text-weight-bold">{{ item.category }}</div>
+                <div class="text-h6 q-mt-xs q-mb-sm ellipsis-2-lines" style="line-height: 1.3;">
+                  {{ item.title }}
                 </div>
-                <div class="text-caption text-grey">
-                  โรงเรียนบ้านท่าซุง
-                  ขอประกาศรายชื่อนักเรียนที่ผ่านการคัดเลือกเข้าศึกษาต่อในระดับชั้นประถมศึกษาปีที่ 1
-                  ประจำปีการศึกษา 2568 (รอบที่ 1)...
+                <div class="text-caption text-grey flex items-center q-mb-sm">
+                  <q-icon name="calendar_today" class="q-mr-xs" /> {{ item.date }}
+                </div>
+                <div class="text-body2 text-grey-8 ellipsis-2-lines">
+                  {{ item.summary }}
                 </div>
               </q-card-section>
               <q-card-actions align="right">
@@ -152,44 +157,6 @@
               </q-card-actions>
             </q-card>
           </div>
-
-          <div class="col-12 col-md-4 animate-fade-in-up delay-2">
-            <q-card class="my-card h-100 shadow-2 hover-card">
-              <q-img src="/hero2.png" height="200px" />
-              <q-card-section>
-                <div class="text-overline text-primary">ประชาสัมพันธ์</div>
-                <div class="text-h6 q-mt-sm q-mb-xs">ประชุมผู้ปกครอง ภาคเรียนที่ 1/2568</div>
-                <div class="text-caption text-grey">
-                  ขอเชิญผู้ปกครองนักเรียนทุกระดับชั้น
-                  เข้าร่วมรับฟังนโยบายการจัดการศึกษาและพบปะครูประจำชั้น
-                  เพื่อเตรียมความพร้อมก่อนเปิดเทอม...
-                </div>
-              </q-card-section>
-              <q-card-actions align="right">
-                <q-btn flat color="primary" label="อ่านเพิ่มเติม" />
-              </q-card-actions>
-            </q-card>
-          </div>
-
-          <div class="col-12 col-md-4 animate-fade-in-up delay-3">
-            <q-card class="my-card h-100 shadow-2 hover-card">
-              <q-img src="/hero3.png" height="200px" />
-              <q-card-section>
-                <div class="text-overline text-positive">ผลงานวิชาการ</div>
-                <div class="text-h6 q-mt-sm q-mb-xs">ผลการประเมินคุณภาพการศึกษา (NT) ชั้น ป.3</div>
-                <div class="text-caption text-grey">
-                  ขอแสดงความยินดีกับนักเรียนระดับชั้นประถมศึกษาปีที่ 3 ที่ทำคะแนนการทดสอบ NT
-                  ได้สูงกว่าระดับประเทศในทุกด้าน ประจำปีการศึกษา 2567...
-                </div>
-              </q-card-section>
-              <q-card-actions align="right">
-                <q-btn flat color="primary" label="อ่านเพิ่มเติม" />
-              </q-card-actions>
-            </q-card>
-          </div>
-        </div>
-        <div class="text-center q-mt-lg">
-          <q-btn outline color="primary" label="ดูข่าวสารทั้งหมด" rounded class="q-px-lg" />
         </div>
       </section>
 
@@ -610,16 +577,22 @@
 
 <script setup lang="ts">
 import { ref, computed, watch, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 import { useQuasar } from 'quasar';
+import { useNewsStore } from '@/stores/news';
 
 const $q = useQuasar();
+const router = useRouter();
+const newsStore = useNewsStore();
 
 const slide = ref('1');
 const tab = ref('all');
 const calendarMode = ref('grid');
+const latestNews = computed(() => newsStore.getLatestNews);
 
 onMounted(() => {
   calendarMode.value = $q.screen.lt.sm ? 'list' : 'grid';
+  void newsStore.fetchNews();
 });
 
 watch(
