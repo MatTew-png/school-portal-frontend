@@ -1,8 +1,9 @@
 <template>
-  <q-page class="q-pa-xl bg-background">
+  <q-page class="bg-background" :class="$q.screen.lt.md ? 'q-pa-md' : 'q-pa-xl'">
     <!-- Welcome Banner -->
     <div
-      class="bg-primary text-white rounded-xl q-pa-xl q-mb-xl relative-position overflow-hidden shadow-2"
+      class="bg-primary text-white rounded-xl q-mb-xl relative-position overflow-hidden shadow-2"
+      :class="$q.screen.lt.md ? 'q-pa-lg' : 'q-pa-xl'"
       style="border-radius: 16px;"
     >
       <div class="row items-center justify-between relative-position z-max">
@@ -15,7 +16,7 @@
             เข้าถึงง่ายสำหรับนักเรียนและผู้ปกครองทุกคน
           </div>
         </div>
-        <div class="col-12 col-md-4 text-right q-mt-md q-mt-md-none flex justify-end q-gutter-sm">
+        <div class="col-12 col-md-4 text-right q-mt-md q-mt-md-none flex justify-end q-gutter-sm" :class="{ 'justify-start': $q.screen.lt.md }">
           <q-btn
             color="orange-8"
             text-color="white"
@@ -48,7 +49,7 @@
     </div>
 
     <!-- Stat Cards -->
-    <div class="row q-col-gutter-xl q-mb-xl">
+    <div :class="['row', $q.screen.lt.md ? 'q-col-gutter-md' : 'q-col-gutter-xl', 'q-mb-xl']">
       <!-- Visitor Today -->
       <div class="col-12 col-sm-6 col-md-3">
         <q-card class="bg-white border-outline-variant rounded-xl overflow-hidden transition-all no-shadow-border" style="border: 1px solid #c1c9bb; border-radius: 16px; box-shadow: none;">
@@ -116,7 +117,7 @@
     </div>
 
     <!-- Bottom Layout: Table and Quick Actions -->
-    <div class="row q-col-gutter-xl">
+    <div :class="['row', $q.screen.lt.md ? 'q-col-gutter-md' : 'q-col-gutter-xl']">
       <!-- Recent Activity Table -->
       <div class="col-12 col-md-8">
         <q-card class="bg-white border-outline-variant rounded-xl overflow-hidden transition-all no-shadow-border" style="border: 1px solid #c1c9bb; border-radius: 16px; box-shadow: none;">
@@ -125,8 +126,9 @@
             <q-btn flat color="primary" label="ดูทั้งหมด" no-caps />
           </q-card-section>
 
-          <q-markup-table flat separator="horizontal" class="text-left">
-            <thead class="bg-grey-1 text-grey-8 font-label">
+          <div class="scroll">
+            <q-markup-table flat separator="horizontal" class="text-left" style="min-width: 500px;">
+              <thead class="bg-grey-1 text-grey-8 font-label">
               <tr>
                 <th class="text-left text-weight-bold">หัวข้อ / รายการ</th>
                 <th class="text-left text-weight-bold">หมวดหมู่</th>
@@ -199,6 +201,7 @@
               </tr>
             </tbody>
           </q-markup-table>
+          </div>
         </q-card>
       </div>
 

@@ -1,5 +1,5 @@
 <template>
-  <q-page class="q-pa-xl bg-background">
+  <q-page class="bg-background" :class="$q.screen.lt.md ? 'q-pa-md' : 'q-pa-xl'">
     <div class="max-w-container mx-auto">
       
       <!-- Page Header with Actions -->
@@ -8,7 +8,7 @@
           <h2 class="font-headline-lg text-primary q-my-none text-h4 text-weight-bold" style="color: #003b09;">จัดการข้อมูลบุคลากร</h2>
           <p class="font-body-md text-on-surface-variant q-mt-sm q-mb-none" style="color: #41493e;">บริหารจัดการข้อมูลสารสนเทศ คณะครู และบุคลากรทางการศึกษา</p>
         </div>
-        <div class="col-12 col-md-auto row q-gutter-sm">
+        <div class="col-12 col-md-auto" :class="{ 'q-mb-md': $q.screen.lt.md }">
           <button class="px-md py-sm border-outline-variant text-on-surface-variant rounded-lg font-bold hover-bg-surface-high transition-all row items-center justify-center cursor-pointer" style="border: 2px solid #003b09; color: #003b09; background: transparent; padding: 12px 24px; border-radius: 8px; gap: 8px;">
             <q-icon name="save" size="sm" />
             <span>บันทึกการเปลี่ยนแปลง</span>
@@ -26,11 +26,12 @@
 
       <!-- Director's Message Section -->
       <section 
-        class="bg-surface-lowest border-outline-variant rounded-xl q-mb-xl overflow-hidden relative-position q-pa-xl"
+        class="bg-surface-lowest border-outline-variant rounded-xl q-mb-xl overflow-hidden relative-position"
+        :class="$q.screen.lt.md ? 'q-pa-lg' : 'q-pa-xl'"
         style="background-color: #ffffff; border: 1px solid #c1c9bb; border-radius: 16px;"
       >
-        <div class="row q-col-gutter-xl items-stretch">
-          <div class="col-12 col-md-auto text-center" style="width: 100%; max-width: 280px;">
+        <div :class="['row', 'items-stretch', $q.screen.lt.md ? 'q-col-gutter-md' : 'q-col-gutter-xl']">
+          <div class="col-12 col-md-auto text-center mx-auto" style="width: 100%; max-width: 280px; margin: 0 auto;">
           <div 
             class="group relative-position overflow-hidden bg-surface-high border-dashed border-outline-variant row items-center justify-center cursor-pointer transition-colors"
             style="border: 2px dashed #c1c9bb; border-radius: 8px; aspect-ratio: 3/4; background-color: #e7e9e1; width: 100%;"
@@ -85,7 +86,7 @@
           </div>
         </div>
         
-        <div class="row q-col-gutter-xl">
+        <div :class="['row', $q.screen.lt.md ? 'q-col-gutter-md' : 'q-col-gutter-xl']">
           <!-- Staff Cards loop -->
           <div class="col-12 col-sm-6 col-md-4 col-xl-3" v-for="staff in staffList" :key="staff.id">
             <div class="staff-card bg-white border-outline-variant overflow-hidden transition-all column full-height relative-position" style="border: 1px solid #c1c9bb; border-radius: 16px; transition: all 0.3s ease;">

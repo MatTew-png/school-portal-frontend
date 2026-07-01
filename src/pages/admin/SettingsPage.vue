@@ -1,5 +1,5 @@
 <template>
-  <q-page class="q-pa-xl bg-background">
+  <q-page class="bg-background" :class="$q.screen.lt.md ? 'q-pa-md' : 'q-pa-xl'">
     <div class="max-w-container mx-auto">
       <!-- Page Header with Actions -->
       <div class="row justify-between items-start items-md-center q-mb-xl q-col-gutter-md">
@@ -7,7 +7,7 @@
           <h2 class="font-headline-lg text-primary q-my-none text-h4 text-weight-bold" style="color: #003b09;">ตั้งค่าระบบ</h2>
           <p class="text-on-surface-variant q-mt-sm q-mb-none" style="color: #41493e; font-size: 16px;">จัดการข้อมูลพื้นฐาน ช่องทางการติดต่อ และการตั้งค่าอื่นๆ ของโรงเรียน</p>
         </div>
-        <div class="col-12 col-md-auto row q-gutter-sm">
+        <div class="col-12 col-md-auto row q-gutter-sm" :class="{ 'q-mt-md': $q.screen.lt.md }">
           <button 
             class="px-md py-sm bg-primary text-on-primary rounded-lg font-bold hover-opacity shadow-sm transition-all row items-center justify-center cursor-pointer" 
             style="background-color: #003b09; color: #ffffff; border: none; padding: 12px 24px; border-radius: 8px; gap: 8px;"
@@ -20,7 +20,7 @@
       </div>
 
       <!-- Settings Form -->
-      <div class="row q-col-gutter-xl">
+      <div :class="['row', $q.screen.lt.md ? 'q-col-gutter-md' : 'q-col-gutter-xl']">
         <!-- School Information -->
         <div class="col-12 col-md-6">
           <q-card class="bg-white border-outline-variant rounded-xl overflow-hidden transition-all no-shadow-border full-height" style="border: 1px solid #c1c9bb; border-radius: 16px; box-shadow: none;">
@@ -90,7 +90,7 @@
                 <q-icon name="public" size="sm" color="primary" />
                 <h3 class="text-h6 text-weight-bold text-primary q-my-none">โซเชียลมีเดีย (Social Media)</h3>
               </div>
-              <div class="row q-col-gutter-lg">
+              <div :class="['row', $q.screen.lt.md ? 'q-col-gutter-md' : 'q-col-gutter-lg']">
                 <div class="col-12 col-md-6">
                   <div class="text-grey-8 font-label q-mb-sm text-weight-medium">Facebook Page URL</div>
                   <q-input outlined v-model="form.facebook" placeholder="https://facebook.com/..." />

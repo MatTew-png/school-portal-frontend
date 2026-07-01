@@ -1,12 +1,12 @@
 <template>
-  <q-page class="q-pa-lg bg-surface">
-    <div class="row q-col-gutter-xl">
+  <q-page class="bg-surface" :class="$q.screen.lt.md ? 'q-pa-md' : 'q-pa-lg'">
+    <div :class="['row', $q.screen.lt.md ? 'q-col-gutter-md' : 'q-col-gutter-xl']">
       <!-- Left: Calendar Grid -->
       <div class="col-12 col-lg-8">
         <div class="column q-gutter-y-lg">
           <!-- Header & View Toggles -->
         <div class="row items-end justify-between q-mb-sm">
-          <div>
+          <div class="col-12 col-md-auto">
             <h1
               class="text-h4 text-weight-bold text-primary q-my-none font-headline"
               style="color: #003b09"
@@ -17,7 +17,7 @@
               ดูและจัดการแผนงานกิจกรรมทั้งหมดของโรงเรียนบ้านท่าซุง
             </p>
           </div>
-          <div class="row bg-grey-2 q-pa-xs rounded-borders">
+          <div class="col-12 col-md-auto row bg-grey-2 q-pa-xs rounded-borders" :class="{ 'q-mt-md': $q.screen.lt.md }">
             <q-btn
               flat
               no-caps
@@ -106,9 +106,10 @@
 
         <!-- Event Type Legend -->
         <div
-          class="row items-center q-gutter-x-lg q-pa-md bg-grey-2 rounded-borders border-outline"
+          class="row items-center q-pa-md bg-grey-2 rounded-borders border-outline"
+          :class="$q.screen.lt.md ? 'q-gutter-sm' : 'q-gutter-x-lg'"
         >
-          <span class="text-weight-bold text-dark">ประเภทกิจกรรม:</span>
+          <span class="text-weight-bold text-dark" :class="{ 'full-width': $q.screen.lt.md }">ประเภทกิจกรรม:</span>
           <div class="row items-center q-gutter-x-sm">
             <div
               class="rounded-borders"

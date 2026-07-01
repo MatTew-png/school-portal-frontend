@@ -1,5 +1,5 @@
 <template>
-  <q-page class="q-pa-lg bg-background">
+  <q-page class="bg-background" :class="$q.screen.lt.md ? 'q-pa-md' : 'q-pa-lg'">
     <div class="max-w-container mx-auto">
       <!-- Page Header Section -->
       <div class="row justify-between items-end q-mb-xl">
@@ -16,7 +16,8 @@
         </div>
         <div class="col-12 col-md-4 text-right q-mt-md q-mt-md-none">
           <button 
-            class="bg-primary text-on-primary font-bold px-xl py-md rounded-xl row items-center justify-center q-ml-auto hover-scale shadow-sm cursor-pointer"
+            class="bg-primary text-on-primary font-bold px-xl py-md rounded-xl row items-center justify-center hover-scale shadow-sm cursor-pointer"
+            :class="$q.screen.lt.md ? 'full-width q-mt-md' : 'q-ml-auto'"
             style="background-color: #003b09; color: #ffffff; padding: 12px 24px; border: none; border-radius: 12px; gap: 8px;"
             @click="showAddDialog = true"
           >
@@ -28,8 +29,9 @@
 
       <!-- Filter & Search Bar -->
       <div 
-        class="bg-surface-lowest p-lg rounded-2xl border-outline-variant row items-center q-gutter-md q-mb-lg"
-        style="background-color: #ffffff; border: 1px solid #c1c9bb; border-radius: 16px; padding: 24px;"
+        class="bg-surface-lowest rounded-2xl border-outline-variant row items-center q-gutter-y-md q-mb-lg"
+        :class="$q.screen.lt.md ? 'q-pa-md' : 'q-pa-lg q-gutter-x-md'"
+        style="background-color: #ffffff; border: 1px solid #c1c9bb; border-radius: 16px;"
       >
         <div class="col-12 col-lg relative-position">
           <q-icon name="search" class="absolute text-outline" size="sm" style="left: 16px; top: 50%; transform: translateY(-50%); color: #71796d; z-index: 1;" />
@@ -41,8 +43,8 @@
             v-model="search"
           />
         </div>
-        <div class="col-12 col-lg-auto row q-gutter-x-md">
-          <div class="relative-position" style="min-width: 180px;">
+        <div class="col-12 col-lg-auto row q-gutter-sm" :class="{ 'full-width': $q.screen.lt.md }">
+          <div class="relative-position" :style="$q.screen.lt.md ? 'flex: 1' : 'min-width: 180px;'">
             <select 
               class="w-full h-56 pl-md pr-xl bg-white border-outline-variant rounded-xl appearance-none focus-ring transition-all cursor-pointer"
               style="width: 100%; height: 56px; padding-left: 16px; padding-right: 40px; border: 1px solid #c1c9bb; border-radius: 12px; outline: none;"
@@ -58,7 +60,7 @@
           </div>
           <button 
             class="h-56 px-lg bg-surface-high text-on-surface-variant font-bold rounded-xl row items-center justify-center hover-bg-surface-variant transition-colors cursor-pointer"
-            style="height: 56px; padding: 0 24px; background-color: #e7e9e1; color: #41493e; border: none; border-radius: 12px; gap: 8px;"
+            :style="`height: 56px; padding: 0 24px; background-color: #e7e9e1; color: #41493e; border: none; border-radius: 12px; gap: 8px; ${$q.screen.lt.md ? 'flex: 1' : ''}`"
           >
             <q-icon name="filter_list" size="sm" />
             <span>กรองข้อมูล</span>
