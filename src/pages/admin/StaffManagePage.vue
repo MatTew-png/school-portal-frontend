@@ -26,10 +26,11 @@
 
       <!-- Director's Message Section -->
       <section 
-        class="bg-surface-lowest border-outline-variant rounded-xl row q-col-gutter-xl q-mb-xl overflow-hidden relative-position"
-        style="background-color: #ffffff; border: 1px solid #c1c9bb; border-radius: 16px; padding: 32px;"
+        class="bg-surface-lowest border-outline-variant rounded-xl q-mb-xl overflow-hidden relative-position q-pa-xl"
+        style="background-color: #ffffff; border: 1px solid #c1c9bb; border-radius: 16px;"
       >
-        <div class="col-12 col-md-auto text-center" style="width: 100%; max-width: 280px;">
+        <div class="row q-col-gutter-xl items-stretch">
+          <div class="col-12 col-md-auto text-center" style="width: 100%; max-width: 280px;">
           <div 
             class="group relative-position overflow-hidden bg-surface-high border-dashed border-outline-variant row items-center justify-center cursor-pointer transition-colors"
             style="border: 2px dashed #c1c9bb; border-radius: 8px; aspect-ratio: 3/4; background-color: #e7e9e1; width: 100%;"
@@ -64,6 +65,7 @@
             <span class="text-label-sm text-on-surface-variant text-italic" style="color: #41493e; font-size: 14px;">แก้ไขล่าสุด: 12 ต.ค. 2566</span>
           </div>
         </div>
+      </div>
       </section>
 
       <!-- Staff Directory Grid -->
