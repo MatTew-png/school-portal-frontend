@@ -28,7 +28,7 @@ export const useEventsStore = defineStore('events', {
         time: '00:00 - 23:59',
         location: 'วันหยุดราชการ',
         description: 'โรงเรียนหยุดทำการ 1 วัน เนื่องในวันแรงงานแห่งชาติ',
-        color: 'bg-green-8',
+        color: 'bg-red-8',
       },
       {
         id: '2',
@@ -37,7 +37,7 @@ export const useEventsStore = defineStore('events', {
         time: '00:00 - 23:59',
         location: 'วันหยุดราชการ',
         description: 'โรงเรียนหยุดทำการ 1 วัน เนื่องในวันฉัตรมงคล',
-        color: 'bg-green-8',
+        color: 'bg-red-8',
       },
       {
         id: '3',
@@ -46,7 +46,7 @@ export const useEventsStore = defineStore('events', {
         time: '00:00 - 23:59',
         location: 'วันหยุดราชการ',
         description: 'โรงเรียนหยุดทำการ 1 วัน เนื่องในวันพระราชพิธีพืชมงคลจรดพระนังคัลแรกนาขวัญ',
-        color: 'bg-green-8',
+        color: 'bg-purple-8',
       },
       {
         id: '4',
@@ -56,7 +56,7 @@ export const useEventsStore = defineStore('events', {
         location: 'โรงเรียนบ้านท่าซุง',
         description:
           'เปิดภาคเรียนที่ 1 ประจำปีการศึกษา 2568 ให้นักเรียนแต่งกายชุดนักเรียนมาโรงเรียนตามปกติ',
-        color: 'bg-primary',
+        color: 'bg-green-8',
       },
       {
         id: '5',
@@ -66,7 +66,7 @@ export const useEventsStore = defineStore('events', {
         location: 'หอประชุมโรงเรียน',
         description:
           'ขอเรียนเชิญผู้ปกครองนักเรียนทุกระดับชั้นเข้าร่วมประชุมผู้ปกครองเพื่อรับฟังนโยบายและแนวทางการจัดการเรียนการสอน',
-        color: 'bg-orange-6',
+        color: 'bg-yellow-8',
       },
     ] as CalendarEvent[],
   }),
