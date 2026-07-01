@@ -114,7 +114,13 @@
       <div class="q-pa-md">
         <q-separator class="q-mb-md" />
         <q-list style="gap: 4px; display: flex; flex-direction: column">
-          <q-item clickable v-ripple class="text-grey-8">
+          <q-item 
+            clickable 
+            v-ripple 
+            to="/admin/settings"
+            active-class="bg-blue-1 text-primary text-weight-bold rounded-borders"
+            class="text-grey-8"
+          >
             <q-item-section avatar>
               <q-icon name="settings" />
             </q-item-section>
