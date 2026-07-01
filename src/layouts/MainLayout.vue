@@ -133,7 +133,7 @@
                 <q-btn flat round dense icon="ondemand_video" />
               </div>
               <div class="text-caption text-grey-4 q-mt-xs">
-                &copy; 2026 โรงเรียนบ้านท่าซุง. All rights reserved.
+                &copy; 2026 <router-link to="/admin" style="color: inherit; text-decoration: none;">โรงเรียนบ้านท่าซุง</router-link>. All rights reserved.
               </div>
             </div>
           </div>
